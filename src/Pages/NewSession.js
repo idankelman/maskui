@@ -2,13 +2,12 @@
 
 function NewSession(){
     return (
-
         <div className ="NewSession">
 
         <div className="Title">
             <h1>New Session</h1>
-            <div class = "Reset">
-                <button>Reset</button>
+            <div className = "Reset">
+                <button><h1>Reset</h1></button>
                 <h2>user</h2>
             </div>
             
