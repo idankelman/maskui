@@ -5,17 +5,27 @@
   --NavHov : #0d2e60;
   --NavText : #a2b1c3;
   --BgColor : #f7f9fc;
+  --NavWidth : 275px;
+  --SoftColor : #F8F9FD;
 }
 
 
 .App{
   display: flex;
-  background-color: var(--BgColor);
+  background-color: var(--SoftColor);
   height: 100%;
   width: 100%;
   display: flex;
   
 }
+
+
+/* =========================================================== */
+/* Home                                                      */
+/* =========================================================== */
+
+
+
 
 .Home{
   display: flex;
@@ -25,9 +35,171 @@
   width: 100%;
   height: 100%;
   background-color: var(--MainColor);
-  left:200px
+  margin-left: var(--NavWidth);
 }
 
+.Home *{
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+
+/* =========================================================== */
+/* NewSession                                                      */
+/* =========================================================== */
+
+
+.NewSession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  margin-left: var(--NavWidth);
+}
+
+.NewSession *{
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.NewSession .Title{
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  font-size: 2rem;
+  color: var(--NavText);
+  background-color: white;
+}
+
+.NewSession .Title .Reset{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* width: 100%; */
+  /* height: 100%; */
+  width: 50%;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background-color: var(--SoftColor);
+  cursor: pointer;
+}
+
+.NewSession .Title .Reset button{
+  display: flex;
+  border: none;
+  color: black;
+  background-color: white;
+  justify-content: center;
+  border-radius: 12px;
+  align-items: center;
+  font-size: 3rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+             rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+}
+
+
+.NewSession .Wrapper{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  /* margin-left: var(--NavWidth); */
+}
+
+.NewSession .Wrapper .Left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 100%;
+  background-color: var(--MainColor);
+}
+
+.NewSession .Wrapper .Right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+}
+
+.NewSession .Wrapper .Right .Top{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: var(--NavText);
+  background-color: white;
+}
+
+
+.NewSession .Wrapper .Right .Top .Container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.5rem;
+  color: var(--NavText);
+  background-color: white;
+}
+
+.NewSession .Wrapper .Right .Top .Container .Stream{
+  display: flex;
+  /* width: 500px;
+  height: 500px; */
+  width: 500px;
+  aspect-ratio: 16 / 9;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+  /* box-shadow: -12px 12px 10px rgba(70,70,70,0.75),
+              10px 10px 10px  rgba(255,255,255,0.4);  */
+
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+             rgba(17, 17, 26, 0.1) 0px 0px 8px;
+
+}
+
+.NewSession .Wrapper .Right .Top .Container .Stream img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+
+
+/* =========================================================== */
+/* Navbar                                                      */
+/* =========================================================== */
 
 
 .Navbar {
@@ -46,7 +218,7 @@
   /* width: ; */
   /* min-width: 140px; */
   /* max-width: 200px; */
-  width: 275px;
+  width: var(--NavWidth);
   position: fixed;
   z-index: 1;
   top: 0;
@@ -258,3 +430,9 @@
   filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg) brightness(97%) contrast(98%); 
   transition: all ease 0s;
 } */
+
+
+/* =========================================================== */
+/* Other                                                   */
+/* =========================================================== */
+
