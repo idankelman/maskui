@@ -222,3 +222,11 @@
   color: white;
   transition: all ease 0.35s;
 }
+
+
+.selected{ 
+  background-color: var(--NavHov);
+  color: white;
+  background-color: #0d2e60;
+  transition: all ease 0.35s;
+}
