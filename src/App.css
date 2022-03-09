@@ -216,17 +216,45 @@
  filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg) brightness(97%) contrast(98%); 
  transition: all ease 0s;
 }
-.Navbar .Container .Center .Links .Link:hover>.News{
 
+.Navbar .Container .Center .Links .Link:hover>.News{
   background-color: #1AC0F7;
   color: white;
   transition: all ease 0.35s;
 }
 
 
-.selected{ 
-  background-color: var(--NavHov);
-  color: white;
-  background-color: #0d2e60;
+.selected + .News{ 
+  background-color: #1AC0F7;
+  color: white !important;
   transition: all ease 0.35s;
 }
+
+/* .selected{
+  color:white !important;
+  background-color: var(--NavHov);
+} */
+
+ /* .Link a:is(.selected) {
+  color:white !important;
+  background-color: var(--NavHov)!important;
+}  */
+
+/* .Link a:is(.selected)> .Link{
+  background-color: var(--NavHov)!important;
+} */
+
+.Link:has( .selected) {
+  color:white !important;
+  background-color: var(--NavHov) !important;
+}
+
+.selected{
+  color:white !important;
+  /* background-color: var(--NavHov) !important; */
+}
+/* 
+.Link a:is(.selected)>.Logo img{
+  filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg) brightness(97%) contrast(98%); 
+  transition: all ease 0s;
+} */
