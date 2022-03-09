@@ -46,7 +46,7 @@
   /* width: ; */
   /* min-width: 140px; */
   /* max-width: 200px; */
-  width: 200px;
+  width: 275px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -62,6 +62,11 @@
   font-family: monospace;
   font-size: 20px;
 
+}
+
+.Navbar *{
+ transition: all ease 0.35s;
+ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .Navbar .Container {
@@ -179,14 +184,41 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-
+}
+.Navbar .Container .Center .Links .Logo img{
+  filter: invert(81%) sepia(13%) saturate(378%) hue-rotate(176deg) brightness(85%) contrast(89%);
+  transition: all ease 0s;
 }
 
+.Navbar .Container .Center .Links .Link .News{
+  
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-right: 15px;
+    font-size: 13px;
+    background-color: none;
+    color:transparent;
+    padding: 4px 15px 4px 15px;
+    border-radius: 15px;
+}
 
 .Navbar .Container .Center .Links .Link:hover{
   background-color: var(--NavHov);
   color: white;
   transition: all ease 0.35s;
 
+}
+
+.Navbar .Container .Center .Links .Link:hover> .Logo img{
+ filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg) brightness(97%) contrast(98%); 
+ transition: all ease 0s;
+}
+.Navbar .Container .Center .Links .Link:hover>.News{
+
+  background-color: #1AC0F7;
+  color: white;
+  transition: all ease 0.35s;
 }

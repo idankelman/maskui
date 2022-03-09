@@ -19,6 +19,7 @@ function NavBar() {
                                 <img src={logo} />
                             </div>
                             <a href="/">Home</a>
+                            <div className='News'>12</div>
                         </div>
 
                         <div className="Link">
@@ -26,6 +27,7 @@ function NavBar() {
                                 <img src={logo} />
                             </div>
                             <a href="/History">History</a>
+                            <div className='News'>12</div>
                         </div>
 
                         <div className="Link">
@@ -33,6 +35,7 @@ function NavBar() {
                                 <img src={logo} />
                             </div>
                             <a href="/New_Session">New Session</a>
+                            <div className='News'>12</div>
                         </div>
                         
                     </div>
