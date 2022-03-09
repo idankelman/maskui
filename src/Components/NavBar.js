@@ -88,6 +88,47 @@ function NavBar() {
               </NavLink>
               <div className="News">12</div>
             </div>
+
+            <div className="Link">
+              <div className="Logo">
+                <img src={logo} />
+              </div>
+              <NavLink exact to="/Help" activeClassName="selected">
+                Help
+              </NavLink>
+              <div className="News">12</div>
+            </div>
+
+            <div className="Link">
+              <div className="Logo">
+                <img src={logo} />
+              </div>
+              <NavLink exact to="/Authers" activeClassName="selected">
+                Authers
+              </NavLink>
+              <div className="News">12</div>
+            </div>
+
+            <div className="Link">
+              <div className="Logo">
+                <img src={logo} />
+              </div>
+              <NavLink exact to="/About" activeClassName="selected">
+                About Mechanisim
+              </NavLink>
+              <div className="News">12</div>
+            </div>
+
+            <div className="Link">
+              <div className="Logo">
+                <img src={logo} />
+              </div>
+              <NavLink exact to="/Contact" activeClassName="selected">
+                Contact
+              </NavLink>
+              <div className="News">12</div>
+            </div>
+
           </div>
         </div>
       </div>

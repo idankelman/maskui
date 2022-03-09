@@ -1,11 +1,18 @@
 
 
 import './App.css';
-import NewSession from './Pages/NewSession.js';
-import Home from './Pages/Home.js';
-import History from './Pages/History.js';
 import {Route} from 'react-router-dom';
+
+import Home from './Pages/Home.js';
+import NewSession from './Pages/NewSession.js';
+import History from './Pages/History.js';
 import NavBar from './Components/NavBar';
+import Help from './Pages/Help.js';
+import Authers from './Pages/Authers.js';
+import About from './Pages/About.js';
+import Contact from './Pages/Contact.js';
+
+
 
 function App() {
   return (
@@ -13,8 +20,13 @@ function App() {
      <NavBar />
       {/* <switch> */}
         <Route exact path="/" component={Home} />
-        <Route path="/History" component={History} />
-        <Route path="/New_Session" component={NewSession} />
+        <Route exact path="/History" component={History} />
+        <Route exact path="/New_Session" component={NewSession} />
+        <Route exact path="/Help" component={Help} />
+        <Route exact path="/Authers" component={Authers} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/Contact" component={Contact} />
+
         {/* place for future sites */}
 
       {/* </switch> */}
