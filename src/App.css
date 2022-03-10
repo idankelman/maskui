@@ -59,12 +59,25 @@
 .Home .Home-content{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
   height: 100%;
   background-color: var(--MainColor);
   overflow-x: hidden;
+}
+
+.Home .Header
+{
+  position: absolute;
+  /* width: 100%; */
+  /* height: 40%; */
+  top: 22%;
+  left: 47%;
+  font-weight: bold;
+  font-size: 4rem;
+  /* cursor: none; */
+
 }
 
 .Home .Home-content .Home-content-left{
@@ -117,6 +130,25 @@
     overflow-x: hidden;
 }
 
+
+.Home .Home-content .Home-content-right .Description {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  overflow-x: hidden;
+  right:50%;
+  z-index: 4;
+  /* overflow: ; */
+  font-size: 30px;
+  font-weight: bold;
+  
+  margin-bottom: 40px;
+}
+
 .Home .Home-content .Home-content-right .Explore {
   display: flex;
   flex-direction: column;
@@ -126,7 +158,11 @@
   height: 100%;
   background-color: var(--MainColor);
   overflow-x: hidden;
+  margin-bottom: 40px;
 }
+
+
+
 
 
 .Home .Home-content .Home-content-right .Explore button{
