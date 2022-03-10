@@ -21,6 +21,9 @@ function Home() {
             <div className="Header">
                 MASK DETECTION
             </div>
+            <div className="Description">
+                        Come And See What We Are Doing
+            </div>
             <div className="Home-content">
                 <div className="Home-content-left">
                     <div className="Spline">
@@ -29,11 +32,6 @@ function Home() {
                     </div>
                 </div>
                 <div className="Home-content-right">
-
-                    <div className="Description">
-                        Come And See What We Are Doing
-                    </div>
-
                     <div className="Explore">
                         <button> More</button>
                         <button> Log In</button>
