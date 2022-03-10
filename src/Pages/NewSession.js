@@ -6,7 +6,7 @@ import Title from "../Components/Title";
 function NewSession() {
     return (
         <div className="NewSession">
-            <Title title = "New Session"/>
+            <Title title = "New"/>
             <div className="Wrapper">
                 <div className="Left">
                     <div className="Start">
@@ -21,7 +21,7 @@ function NewSession() {
                 <div className="Right">
                     <div className="Top">
                         <div className="Container">
-                            Top
+                            Live Capture
                             <div className="Stream">
                                 {/* <h1>Stream</h1> */}
                                 <img src="https://d3lkc3n5th01x7.cloudfront.net/wp-content/uploads/2020/04/01023335/MaskDetection_Banner-1-1.png" alt="mask" />

@@ -278,6 +278,53 @@
 
 }
 
+@media only screen and (max-width: 1200px) {
+  /* .NewSession .Bottom .Person{
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 100px;
+    height: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: var(--NavHov);
+  } */
+  .NewSession .Wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column-reverse;
+    background-color: var(--MainColor);
+    cursor: pointer;
+    transition: all ease 0.5s;
+  }
+
+  .NewSession .Wrapper .Right {
+      display: flex;
+      width:95%;
+      margin-left: 20px;
+      margin-right: 20px;
+  }
+  .NewSession .Wrapper .Left{
+    display: flex;
+    width: 90%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: var(--MainColor);
+    /* cursor: pointer; */
+  }
+
+}
+  
+
 
 
 /* =========================================================== */
