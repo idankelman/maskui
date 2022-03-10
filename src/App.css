@@ -1,45 +1,48 @@
 :root {
-  --MainColor : #f5f5f5;
-  --SecondaryColor : #e5e5e5;
-  --NavBg : linear-gradient(180deg, #0f488e, #17195e);
-  --NavHov : #0d2e60;
-  --NavText : #a2b1c3;
-  --BgColor : #f7f9fc;
-  --NavWidth : 275px;
-  --SoftColor : #F8F9FD;
+  --MainColor: #f5f5f5;
+  --SecondaryColor: #e5e5e5;
+  --NavBg: linear-gradient(180deg, #0f488e, #17195e);
+  --NavHov: #0d2e60;
+  --NavText: #a2b1c3;
+  --BgColor: #f7f9fc;
+  --NavWidth: 275px;
+  --SoftColor: #f8f9fd;
 }
 
-
-.App{
+.App {
   display: flex;
   background-color: var(--SoftColor);
   height: 100%;
   width: 100%;
   display: flex;
-  
 }
 
-.App *{
-  transition: ease all .5s;
+.App * {
+  transition: ease all 0.5s;
 }
-
 
 /* =========================================================== */
 /* All pages                                                      */
 /* =========================================================== */
 
-
-
-
-
-.NewSession , .Home , .History , .Help , .Authers , .About , .Contact , *
-{
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+.NewSession,
+.Home,
+.History,
+.Help,
+.Authers,
+.About,
+.Contact,
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
-.NewSession , .Home  , .History  , .Help,  .Authers ,  .About , .Contact{
+.NewSession,
+.Home,
+.History,
+.Help,
+.Authers,
+.About,
+.Contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,8 +58,7 @@
 /* Home                                                      */
 /* =========================================================== */
 
-
-.Home .Home-content{
+.Home .Home-content {
   margin-top: 100px;
   display: flex;
   flex-direction: row;
@@ -68,8 +70,7 @@
   overflow-x: hidden;
 }
 
-.Home .Header
-{
+.Home .Header {
   position: absolute;
   /* width: 100%; */
   /* height: 40%; */
@@ -78,11 +79,7 @@
   font-weight: bold;
   font-size: 4rem;
   /* cursor: none; */
-
 }
-
-
-
 
 .Home .Description {
   position: absolute;
@@ -95,9 +92,7 @@
   /* cursor: none; */
 }
 
-
-.Home .Home-content .Home-content-left{
-
+.Home .Home-content .Home-content-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -108,8 +103,7 @@
   overflow-x: hidden;
 }
 
-.Home .Home-content .Home-content-left .Spline{
-  
+.Home .Home-content .Home-content-left .Spline {
   display: flex;
   align-items: center;
   /* justify-content: flex-start; */
@@ -119,32 +113,26 @@
   border: none;
   padding-left: 40px;
   /* padding-right: 40px; */
-
 }
 
-
-
-.Home .Home-content .Home-content-left .Spline iframe{
+.Home .Home-content .Home-content-left .Spline iframe {
   display: flex;
   width: 100%;
   height: 100%;
   border: none;
-  }
+}
 
-
-
-.Home .Home-content .Home-content-right{
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: 30%;
-    max-width: 400px;
-    margin-right: 40px;
-    height: 100%;
-    background-color: var(--MainColor);
-    overflow-x: hidden;
+.Home .Home-content .Home-content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30%;
+  max-width: 400px;
+  margin-right: 40px;
+  height: 100%;
+  background-color: var(--MainColor);
+  overflow-x: hidden;
 }
 
 .Home .Home-content .Home-content-right .Explore {
@@ -159,11 +147,7 @@
   margin-bottom: 40px;
 }
 
-
-
-
-
-.Home .Home-content .Home-content-right .Explore button{
+.Home .Home-content .Home-content-right .Explore button {
   background-color: var(--SecondaryColor);
   color: var(--MainColor);
   border: none;
@@ -174,70 +158,63 @@
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
-  transition: ease all .5s;
+  transition: ease all 0.5s;
   color: black;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 
-
-.Home .Home-content .Home-content-right .Explore button:hover{
-  background-color:#1AC0F7 ;
-  background-color:#FFA64D;
-  transition: ease all .5s;
+.Home .Home-content .Home-content-right .Explore button:hover {
+  background-color: #1ac0f7;
+  background-color: #ffa64d;
+  transition: ease all 0.5s;
 }
 
 @media only screen and (max-width: 1500px) {
-  .Home .Home-content .Home-content-right{
+  .Home .Home-content .Home-content-right {
     width: 20%;
   }
-  .Home .Home-content .Home-content-left{
+  .Home .Home-content .Home-content-left {
     width: 80%;
   }
 }
 
-
-
 @media only screen and (max-width: 1100px) {
-
-  .Home .Home-content{
+  .Home .Home-content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
-  .Home .Home-content .Home-content-right{
+  .Home .Home-content .Home-content-right {
     width: 50%;
     padding-right: 0px;
     padding-left: 0px;
   }
-  .Home .Home-content .Home-content-left{
+  .Home .Home-content .Home-content-left {
     width: 100%;
   }
+
+  .Home .Home-content .Home-content-left .Spline {
+    width: 90%;
+  }
 }
-
-
 
 /* =========================================================== */
 /* NewSession                                                      */
 /* =========================================================== */
 
-
-
-.NewSession *{
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+.NewSession * {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.NewSession button:hover{
+.NewSession button:hover {
   cursor: pointer;
   transition: all ease 0.35s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
 }
 
-
-.NewSession .Wrapper{
+.NewSession .Wrapper {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -249,7 +226,7 @@
   /* margin-left: var(--NavWidth); */
 }
 
-.NewSession .Wrapper .Left{
+.NewSession .Wrapper .Left {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -263,8 +240,7 @@
   background-color: var(--MainColor);
 }
 
-.NewSession .Wrapper .Left .Start{
-
+.NewSession .Wrapper .Left .Start {
   /* display: flex; */
   justify-content: center;
   align-items: center;
@@ -276,8 +252,7 @@
   cursor: pointer;
 }
 
-
-.NewSession .Wrapper .Left .Start button{
+.NewSession .Wrapper .Left .Start button {
   display: flex;
   border: none;
   color: black;
@@ -294,19 +269,17 @@
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
-
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-.NewSession .Wrapper .Left .Start button:hover{
+.NewSession .Wrapper .Left .Start button:hover {
   cursor: pointer;
   transition: all ease 0.35s;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
-
-.NewSession .Wrapper .Left .Anlyze{
+.NewSession .Wrapper .Left .Anlyze {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -316,11 +289,9 @@
   height: 100%;
   background-color: var(--MainColor);
   cursor: pointer;
-
 }
 
-
-.NewSession .Wrapper .Left .Anlyze button{
+.NewSession .Wrapper .Left .Anlyze button {
   display: flex;
   border: none;
   color: black;
@@ -332,31 +303,29 @@
   align-items: center;
   /* font-size: 3rem; */
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
-
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-.NewSession .Wrapper .Left .Anlyze button:hover{
+.NewSession .Wrapper .Left .Anlyze button:hover {
   cursor: pointer;
   transition: all ease 0.35s;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-
 }
 
-.NewSession .Wrapper .Right{
+.NewSession .Wrapper .Right {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 40px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
   width: 70%;
   height: 100%;
   background-color: white;
 }
 
-.NewSession .Wrapper .Right .Top{
+.NewSession .Wrapper .Right .Top {
   display: flex;
   width: 100%;
   height: 100%;
@@ -370,8 +339,7 @@
   background-color: white;
 }
 
-
-.NewSession .Wrapper .Right .Top .Container{
+.NewSession .Wrapper .Right .Top .Container {
   display: flex;
   width: 100%;
   height: 100%;
@@ -383,7 +351,7 @@
   background-color: white;
 }
 
-.NewSession .Wrapper .Right .Top .Container .Stream{
+.NewSession .Wrapper .Right .Top .Container .Stream {
   display: flex;
   /* width: 500px;
   height: 500px; */
@@ -405,20 +373,16 @@
               10px 10px 10px  rgba(255,255,255,0.4);  */
 
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
-
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-.NewSession .Wrapper .Right .Top .Container .Stream img{
+.NewSession .Wrapper .Right .Top .Container .Stream img {
   display: flex;
   width: 100%;
   height: 100%;
-
 }
 
-
-.NewSession .Bottom{
- 
+.NewSession .Bottom {
   display: flex;
   width: 100%;
   height: 20%;
@@ -431,7 +395,7 @@
   margin-left: 40px;
   border-radius: 60px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
   /* grid-column: 1fr 1fr 1fr; */
   flex-direction: row;
   /* padding-bottom: 100px; */
@@ -442,8 +406,6 @@
   color: var(--NavText);
   background-color: white;
 }
-
- 
 
 @media only screen and (max-width: 1200px) {
   /* .NewSession .Bottom .Person{
@@ -469,12 +431,12 @@
   }
 
   .NewSession .Wrapper .Right {
-      display: flex;
-      width:95%;
-      margin-left: 20px;
-      margin-right: 20px;
+    display: flex;
+    width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
   }
-  .NewSession .Wrapper .Left{
+  .NewSession .Wrapper .Left {
     display: flex;
     width: 90%;
     margin-left: 0px;
@@ -488,19 +450,13 @@
     background-color: var(--MainColor);
     /* cursor: pointer; */
   }
-
 }
-  
-
-
 
 /* =========================================================== */
 /* Navbar                                                      */
 /* =========================================================== */
 
-
 .Navbar {
-
   /* background-color: wheat;
   display: flex;
   justify-content: space-evenly;
@@ -521,7 +477,7 @@
   top: 0;
   left: 0;
   background-image: var(--NavBg);
-  transition: .5s ease;
+  transition: 0.5s ease;
   overflow-x: hidden;
   padding-top: 20px;
   display: flex;
@@ -530,12 +486,11 @@
   justify-content: space-evenly;
   font-family: monospace;
   font-size: 20px;
-
 }
 
-.Navbar *{
- transition: all ease 0.35s;
- font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.Navbar * {
+  transition: all ease 0.35s;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .Navbar .Container {
@@ -547,17 +502,17 @@
   height: 100%;
 }
 
-.Navbar .Container .Top  {
+.Navbar .Container .Top {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: 100px;
-  top:0;
+  top: 0;
   /* background-color: var(--SecondaryColor); */
 }
 
-.Navbar .Container .Top a{
+.Navbar .Container .Top a {
   color: white;
   text-decoration: none;
   font-size: 20px;
@@ -565,7 +520,7 @@
   font-weight: bold;
 }
 
-.Navbar .Container .Top .Logo{
+.Navbar .Container .Top .Logo {
   display: flex;
   width: 40px;
   height: 40px;
@@ -574,19 +529,18 @@
   background-repeat: no-repeat;
 }
 
-
-.Navbar .Container .Center{
+.Navbar .Container .Center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
   height: 80%;
-  top:0;
+  top: 0;
   /* background-color: var(--SecondaryColor); */
 }
 
-.Navbar .Container .Center .Links{
+.Navbar .Container .Center .Links {
   display: flex;
   margin-top: 20px;
   justify-content: flex-start;
@@ -595,14 +549,12 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  top:0;
+  top: 0;
 
   /* background-color: var(--SecondaryColor); */
 }
 
-
-.Navbar .Container .Center .Links .Link a{
-
+.Navbar .Container .Center .Links .Link a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -612,7 +564,7 @@
   /* border-radius: 10px; */
   width: 80%;
   height: 50px;
-  top:0;
+  top: 0;
   text-decoration: none;
   color: var(--NavText);
   margin-top: 5px;
@@ -625,8 +577,7 @@
   /* background-color: var(--SecondaryColor); */
 }
 
-.Navbar .Container .Center .Links .Link{
-
+.Navbar .Container .Center .Links .Link {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -635,7 +586,7 @@
   border-radius: 10px;
   width: 80%;
   height: 50px;
-  top:0;
+  top: 0;
   text-decoration: none;
   color: var(--NavText);
   margin-top: 5px;
@@ -645,8 +596,7 @@
   font-size: 15px;
 }
 
-.Navbar .Container .Center .Links .Logo{
-
+.Navbar .Container .Center .Links .Logo {
   display: flex;
   width: 30px;
   height: 30px;
@@ -654,47 +604,46 @@
   background-position: center;
   background-repeat: no-repeat;
 }
-.Navbar .Container .Center .Links .Logo img{
-  filter: invert(81%) sepia(13%) saturate(378%) hue-rotate(176deg) brightness(85%) contrast(89%);
+.Navbar .Container .Center .Links .Logo img {
+  filter: invert(81%) sepia(13%) saturate(378%) hue-rotate(176deg)
+    brightness(85%) contrast(89%);
   transition: all ease 0s;
 }
 
-.Navbar .Container .Center .Links .Link .News{
-  
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: auto;
-    height: auto;
-    margin-right: 15px;
-    font-size: 13px;
-    background-color: none;
-    color:transparent;
-    padding: 4px 15px 4px 15px;
-    border-radius: 15px;
+.Navbar .Container .Center .Links .Link .News {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: auto;
+  height: auto;
+  margin-right: 15px;
+  font-size: 13px;
+  background-color: none;
+  color: transparent;
+  padding: 4px 15px 4px 15px;
+  border-radius: 15px;
 }
 
-.Navbar .Container .Center .Links .Link:hover{
+.Navbar .Container .Center .Links .Link:hover {
   background-color: var(--NavHov);
   color: white;
   transition: all ease 0.35s;
-
 }
 
-.Navbar .Container .Center .Links .Link:hover> .Logo img{
- filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg) brightness(97%) contrast(98%); 
- transition: all ease 0s;
+.Navbar .Container .Center .Links .Link:hover > .Logo img {
+  filter: invert(82%) sepia(41%) saturate(4137%) hue-rotate(116deg)
+    brightness(97%) contrast(98%);
+  transition: all ease 0s;
 }
 
-.Navbar .Container .Center .Links .Link:hover>.News{
-  background-color: #1AC0F7;
+.Navbar .Container .Center .Links .Link:hover > .News {
+  background-color: #1ac0f7;
   color: white;
   transition: all ease 0.35s;
 }
 
-
-.selected + .News{ 
-  background-color: #1AC0F7;
+.selected + .News {
+  background-color: #1ac0f7;
   color: white !important;
   transition: all ease 0.35s;
 }
@@ -704,7 +653,7 @@
   background-color: var(--NavHov);
 } */
 
- /* .Link a:is(.selected) {
+/* .Link a:is(.selected) {
   color:white !important;
   background-color: var(--NavHov)!important;
 }  */
@@ -713,13 +662,13 @@
   background-color: var(--NavHov)!important;
 } */
 
-.Link:has( .selected) {
-  color:white !important;
+.Link:has(.selected) {
+  color: white !important;
   background-color: var(--NavHov) !important;
 }
 
-.selected{
-  color:white !important;
+.selected {
+  color: white !important;
   /* background-color: var(--NavHov) !important; */
 }
 /* 
@@ -728,13 +677,11 @@
   transition: all ease 0s;
 } */
 
-
 /* =========================================================== */
 /* Title                                            */
 /* =========================================================== */
 
-
-.Title{
+.Title {
   display: flex;
   width: 100%;
   min-height: 100px;
@@ -747,7 +694,7 @@
   background-color: white;
 }
 
-.Title .Content{
+.Title .Content {
   display: flex;
   width: 10%;
   min-width: 150px;
@@ -757,7 +704,7 @@
   flex-direction: column;
 }
 
- .Title .Search{
+.Title .Search {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -770,7 +717,7 @@
   cursor: pointer;
 }
 
- .Title .Search button{
+.Title .Search button {
   display: flex;
   border: none;
   color: black;
@@ -786,18 +733,17 @@
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
   transition: all ease 0.35s;
-
 }
 
-.Title .Search button:hover{
+.Title .Search button:hover {
   cursor: pointer;
   transition: all ease 0.35s;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.Title .Search .InputBox{
+.Title .Search .InputBox {
   display: flex;
   width: 90%;
   height: 50%;
@@ -808,7 +754,7 @@
   cursor: pointer;
 }
 
- .Title .Search .InputBox input{
+.Title .Search .InputBox input {
   display: flex;
   border: none;
   color: black;
@@ -824,12 +770,10 @@
   padding-left: 20px;
   padding-right: 20px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-             rgba(17, 17, 26, 0.1) 0px 0px 8px;
-
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-
- .Title .Logo{
+.Title .Logo {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -840,21 +784,17 @@
   height: 50px;
 }
 
- .Title .Logo img{
+.Title .Logo img {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-
-
 /* =========================================================== */
 /* Person                                                      */
 /* =========================================================== */
 
-
-.Person{
-
+.Person {
   display: flex;
   min-width: 150px;
   max-width: 150px;
@@ -866,11 +806,9 @@
   background-color: var(--NavHov);
   align-items: center;
   justify-content: center;
-
 }
 
-
-.Person button{
+.Person button {
   display: flex;
   width: 100%;
   height: 100%;
@@ -880,13 +818,12 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  border-radius:20px;
-} 
+  border-radius: 20px;
+}
 
-.Person button img{
+.Person button img {
   display: flex;
   width: 40%;
   height: 40%;
   /* width:0px; */
-
 }
