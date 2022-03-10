@@ -1,9 +1,13 @@
 
 
-import logo from "../Assets/user.png";
+import Person from "../Components/Person";
 import Title from "../Components/Title";
 
+
 function NewSession() {
+
+    let People =[1,2,3,4,5,6];
+
     return (
         <div className="NewSession">
             <Title title = "New"/>
@@ -32,19 +36,7 @@ function NewSession() {
 
             </div>
             <div className="Bottom">
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                <div className="Person"></div>
-                {/* <h1>Bottom</h1> */}
+            {People.map(person => (<Person key={person} />))}
             </div>
         </div>
 

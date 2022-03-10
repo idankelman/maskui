@@ -19,6 +19,10 @@
   
 }
 
+.App *{
+  transition: ease all .5s;
+}
+
 
 /* =========================================================== */
 /* All pages                                                      */
@@ -264,19 +268,7 @@
   background-color: white;
 }
 
-.NewSession .Bottom .Person{
-
-  display: flex;
-  min-width: 150px;
-  max-width: 150px;
-  min-height: 150px;
-  height: 20%;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-radius: 20px;
-  background-color: var(--NavHov);
-
-}
+ 
 
 @media only screen and (max-width: 1200px) {
   /* .NewSession .Bottom .Person{
@@ -669,4 +661,48 @@
   display: flex;
   width: 100%;
   height: 100%;
+}
+
+
+
+/* =========================================================== */
+/* Person                                                      */
+/* =========================================================== */
+
+
+.Person{
+
+  display: flex;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 150px;
+  height: 20%;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+  background-color: var(--NavHov);
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.Person button{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-width: 140px;
+  min-height: 140px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius:20px;
+} 
+
+.Person button img{
+  display: flex;
+  width: 80%;
+  height: 80%;
+
 }
