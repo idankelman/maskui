@@ -56,6 +56,166 @@
 /* =========================================================== */
 
 
+.Home .Home-content{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  overflow-x: hidden;
+}
+
+.Home .Header
+{
+  position: absolute;
+  /* width: 100%; */
+  /* height: 40%; */
+  top: 22%;
+  left: 47%;
+  font-weight: bold;
+  font-size: 4rem;
+  /* cursor: none; */
+
+}
+
+
+
+
+.Home .Description {
+  position: absolute;
+  /* width: 100%; */
+  /* height: 40%; */
+  top: 50%;
+  left: 47%;
+  font-weight: bold;
+  font-size: 2rem;
+  /* cursor: none; */
+}
+
+
+.Home .Home-content .Home-content-left{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  background-color: var(--MainColor);
+  overflow-x: hidden;
+}
+
+.Home .Home-content .Home-content-left .Spline{
+  
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-start; */
+  width: 800px;
+  height: 800px;
+  overflow: hidden;
+  border: none;
+  padding-left: 40px;
+  /* padding-right: 40px; */
+
+}
+
+
+
+.Home .Home-content .Home-content-left .Spline iframe{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: none;
+  }
+
+
+
+.Home .Home-content .Home-content-right{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 30%;
+    max-width: 400px;
+    margin-right: 40px;
+    height: 100%;
+    background-color: var(--MainColor);
+    overflow-x: hidden;
+}
+
+.Home .Home-content .Home-content-right .Explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainColor);
+  overflow-x: hidden;
+  margin-bottom: 40px;
+}
+
+
+
+
+
+.Home .Home-content .Home-content-right .Explore button{
+  background-color: var(--SecondaryColor);
+  color: var(--MainColor);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease all .5s;
+  color: black;
+  justify-content: center;
+  align-items: center;  
+}
+
+
+.Home .Home-content .Home-content-right .Explore button:hover{
+  background-color:#1AC0F7 ;
+  background-color:#FFA64D;
+  transition: ease all .5s;
+}
+
+@media only screen and (max-width: 1500px) {
+  .Home .Home-content .Home-content-right{
+    width: 20%;
+  }
+  .Home .Home-content .Home-content-left{
+    width: 80%;
+  }
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+
+  .Home .Home-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Home .Home-content .Home-content-right{
+    width: 50%;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .Home .Home-content .Home-content-left{
+    width: 100%;
+  }
+}
+
 
 
 /* =========================================================== */
@@ -71,6 +231,9 @@
 
 .NewSession button:hover{
   cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }
 
 
@@ -135,6 +298,13 @@
 
 }
 
+.NewSession .Wrapper .Left .Start button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
 
 .NewSession .Wrapper .Left .Anlyze{
   display: flex;
@@ -166,7 +336,12 @@
 
 }
 
+.NewSession .Wrapper .Left .Anlyze button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
+}
 
 .NewSession .Wrapper .Right{
   display: flex;
@@ -602,6 +777,7 @@
   background-color: white;
   justify-content: center;
   font-size: 2rem;
+  font-weight: bold;
   border-radius: 12px;
   align-items: center;
   /* font-size: 3rem; */
@@ -611,7 +787,14 @@
   padding-right: 20px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
              rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  transition: all ease 0.35s;
 
+}
+
+.Title .Search button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .Title .Search .InputBox{
@@ -696,13 +879,14 @@
   border: none;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   border-radius:20px;
 } 
 
 .Person button img{
   display: flex;
-  width: 80%;
-  height: 80%;
+  width: 40%;
+  height: 40%;
+  /* width:0px; */
 
 }
