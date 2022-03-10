@@ -55,7 +55,7 @@ function NavBar() {
           <div className="Logo">
             <img src={logo} />
           </div>
-          <a>MaskDetect</a>
+          <a>Mask Detect</a>
         </div>
         <div className="Center">
           <div className="Links">
