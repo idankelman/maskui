@@ -1,4 +1,10 @@
-function Authers(){
-    return <div>This Is Authers </div>;
-    }
-    export default Authers;
+import Title from "../Components/Title";
+
+function Authers() {
+    return (
+    <div className="Authers">
+        <Title title="Authers"/>
+    </div>
+    );
+}
+export default Authers;

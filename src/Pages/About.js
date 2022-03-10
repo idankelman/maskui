@@ -1,4 +1,10 @@
+import Title from "../Components/Title";
+
 function About() {
-  return <div>This Is About </div>;
+    return (
+    <div className="About">
+        <Title title="About"/>
+    </div>
+    );
 }
 export default About;

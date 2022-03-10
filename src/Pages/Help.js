@@ -1,4 +1,10 @@
-function Help(){
-    return <div>This Is Help </div>;
-    }
-    export default Help;
+import Title from "../Components/Title";
+
+function Help() {
+    return (
+    <div className="Help">
+        <Title title="Help"/>
+    </div>
+    );
+}
+export default Help;

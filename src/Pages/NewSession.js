@@ -1,29 +1,14 @@
 
 
-import logo from "../Assets/mask.png";
-
+import logo from "../Assets/user.png";
+import Title from "../Components/Title";
 
 function NewSession() {
     return (
         <div className="NewSession">
-
-            <div className="Title">
-                New Session
-                <div className="Search">
-                    <div className="InputBox">
-                        <input type = "text"/>
-                    </div>
-                    <button>Search</button>
-                </div>
-                <div className="Logo">
-                    <img src={logo} />
-                </div>
-            </div>
-            
+            <Title title = "New Session"/>
             <div className="Wrapper">
                 <div className="Left">
-                    {/* <h1>Left</h1> */}
-
                     <div className="Start">
                         <button><h2>Start seesion</h2></button>
                         <button><h2>Choose Threshold</h2></button>
@@ -34,7 +19,6 @@ function NewSession() {
                     </div>
                 </div>
                 <div className="Right">
-                    {/* <h1>Right</h1> */}
                     <div className="Top">
                         <div className="Container">
                             Top
