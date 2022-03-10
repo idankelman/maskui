@@ -11,6 +11,7 @@ import Help from './Pages/Help.js';
 import Authers from './Pages/Authers.js';
 import About from './Pages/About.js';
 import Contact from './Pages/Contact.js';
+import Statistics from './Pages/Statistics.js';
 
 
 
@@ -26,6 +27,8 @@ function App() {
         <Route exact path="/Authers" component={Authers} />
         <Route exact path="/About" component={About} />
         <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/Statistics" component={Statistics} />
+
 
         {/* place for future sites */}
 
