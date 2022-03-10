@@ -1,9 +1,15 @@
+import Title from "../Components/Title";
+
 
 function Home() {
     return (
+
+
+
         <div className ="Home">
-            {/* <NavBar /> */}
-            <div>This Is Home </div>
+            <Title title="Home"/>
+        
+
         </div>
     );
 }

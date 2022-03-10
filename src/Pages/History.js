@@ -1,4 +1,10 @@
-function History(){
-    return <div>This Is History </div>;
-    }
-    export default History;
+import Title from "../Components/Title";
+
+function History() {
+    return (
+    <div className="History">
+        <Title title="History"/>
+    </div>
+    );
+}
+export default History;
