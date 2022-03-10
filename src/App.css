@@ -181,6 +181,12 @@
 }
 
 
+.Home .Home-content .Home-content-right .Explore button:hover{
+  background-color:#1AC0F7 ;
+  background-color:#FFA64D;
+  transition: ease all .5s;
+}
+
 @media only screen and (max-width: 1500px) {
   .Home .Home-content .Home-content-right{
     width: 20%;
@@ -225,6 +231,9 @@
 
 .NewSession button:hover{
   cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
 }
 
 
@@ -289,6 +298,13 @@
 
 }
 
+.NewSession .Wrapper .Left .Start button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+}
+
 
 .NewSession .Wrapper .Left .Anlyze{
   display: flex;
@@ -320,7 +336,12 @@
 
 }
 
+.NewSession .Wrapper .Left .Anlyze button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 
+}
 
 .NewSession .Wrapper .Right{
   display: flex;
@@ -756,6 +777,7 @@
   background-color: white;
   justify-content: center;
   font-size: 2rem;
+  font-weight: bold;
   border-radius: 12px;
   align-items: center;
   /* font-size: 3rem; */
@@ -765,7 +787,14 @@
   padding-right: 20px;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
              rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  transition: all ease 0.35s;
 
+}
+
+.Title .Search button:hover{
+  cursor: pointer;
+  transition: all ease 0.35s;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .Title .Search .InputBox{
@@ -850,13 +879,14 @@
   border: none;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   border-radius:20px;
 } 
 
 .Person button img{
   display: flex;
-  width: 80%;
-  height: 80%;
+  width: 40%;
+  height: 40%;
+  /* width:0px; */
 
 }
