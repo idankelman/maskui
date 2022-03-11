@@ -1,9 +1,10 @@
-import Title from "../Components/Title";
-import Idan from "../Assets/Idan.png";
+import Idan from "../Assets/Authers/Idan.png";
+import ofek from "../Assets/Authers/ofek.png";
 import Cover from "../Assets/cover.jpg";
 import Gmail from "../Assets/Social/Gmail.png";
 import whatsapp from "../Assets/Social/whatsapp.png";
 import Linkedin from "../Assets/Social/Linkedin.png";
+import Github from "../Assets/Social/Github.png";
 
 function Authers() {
     return (
@@ -40,16 +41,19 @@ function Authers() {
                         <img src={Gmail} width="30px" alt="Gmail"/></a>
                   
                         <a rel="https://api.whatsapp.com/send?phone=0549764489"  href="https://api.whatsapp.com/send?phone=0549764489">
-                        <img src={whatsapp} width="23px" alt="Secret"/></a>
+                        <img src={whatsapp} width="30px" alt="Secret"/></a>
+
+                        <a rel="https://github.com/idankelman"  href="https://github.com/idankelman">
+                        <img src={Github} width="30px" alt="Github"/></a>
                     </div>
                 </div> 
 
                 <div className = "Auther">
                     <div className = "Name">
-                        Ofek Zada
+                        Ofek Harpaz
                     </div>
                     <div className = "Pic">
-                        <img src = {Idan} alt = "logo" />
+                        <img src = {ofek} alt = "logo" />
                     </div>
                     <div className = "Description">
                         4th year student at Jeruslam College Of Engeneering
@@ -64,7 +68,10 @@ function Authers() {
                         <img src={Gmail} width="30px" alt="Gmail"/></a>
                   
                         <a rel="https://api.whatsapp.com/send?phone=0549764489"  href="https://api.whatsapp.com/send?phone=0549764489">
-                        <img src={whatsapp} width="23px" alt="Secret"/></a>
+                        <img src={whatsapp} width="30px" alt="Secret"/></a>
+
+                        <a rel="https://github.com/ofekharpaz9"   href="https://github.com/ofekharpaz">
+                        <img src={Github} width="30px" alt="Github"/></a>
 
                     </div>
                 </div>
