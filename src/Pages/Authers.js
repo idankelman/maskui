@@ -29,10 +29,6 @@ function Authers() {
                         work as a software developer.
                     </div>
                     <div className = "Links">
-                        {/* <a href="/Home">Gmail</a>
-                        <a href="/Home">Facebook</a>
-                        <a href="/Home">Linkedin</a> */}
-
 
                         <a rel="https://www.linkedin.com/in/idan-kelman-cs/"  href="https://www.linkedin.com/in/idan-kelman-cs/">
                         <img src={Linkedin} width="30px" alt="LinkedIn"/></a>
@@ -61,13 +57,13 @@ function Authers() {
                         work as a software developer.
                     </div>
                     <div className = "Links">
-                        <a rel="https://www.linkedin.com/in/idan-kelman-cs/"  href="https://www.linkedin.com/in/idan-kelman-cs/">
+                        <a rel="https://www.linkedin.com/in/ofek-harpaz-185881184/"  href="https://www.linkedin.com/in/ofek-harpaz-185881184/">
                         <img src={Linkedin} width="30px" alt="LinkedIn"/></a>
              
-                        <a rel="mailto:kelmanidan@gmail.com" href="mailto:kelmanidan@gmail.com">
+                        <a rel="mailto:ofekharpaz6@gmail.com" href="mailto:ofekharpaz6@gmail.com">
                         <img src={Gmail} width="30px" alt="Gmail"/></a>
                   
-                        <a rel="https://api.whatsapp.com/send?phone=0549764489"  href="https://api.whatsapp.com/send?phone=0549764489">
+                        <a rel="https://api.whatsapp.com/send?phone=0585885085"  href="https://api.whatsapp.com/send?phone=0585885085">
                         <img src={whatsapp} width="30px" alt="Secret"/></a>
 
                         <a rel="https://github.com/ofekharpaz9"   href="https://github.com/ofekharpaz">
