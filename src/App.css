@@ -507,6 +507,7 @@
   display: flex;
   width: 80%;
   height: 100%;
+  min-width: 600px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
@@ -642,6 +643,23 @@
   /* filter: invert(1); */
   transform: scale(1.5);
 }
+
+
+
+@media only screen and (max-width: 950px) {
+  .Authers .Content .Authers-Container{
+    flex-direction: column;
+    min-width: unset;
+    /* font-size: 1.2rem; */
+    
+  }
+  .Authers .Content .Authers-Container .Auther {
+    /* font-size: 1.2rem; */
+    min-width: unset;
+
+  }
+}
+
 
 
 /* =========================================================== */

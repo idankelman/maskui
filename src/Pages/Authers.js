@@ -8,7 +8,7 @@ import Linkedin from "../Assets/Social/Linkedin.png";
 function Authers() {
     return (
     <div className="Authers">
-        <Title title="Authers"/>
+        {/* <Title title="Authers"/> */}
         <div className = "Content">
             <div className = "Top">
                 <img src ={Cover} alt = "logo" />
