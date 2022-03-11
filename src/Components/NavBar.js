@@ -53,15 +53,15 @@ function NavBar() {
       <div className="Container">
         <div className="Top">
           <div className="Logo">
-            <img src={logo} />
+            <img src={logo} alt = "logo" />
           </div>
-          <a>MaskDetect</a>
+          <a>Mask Detect</a>
         </div>
         <div className="Center">
           <div className="Links">
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/" activeClassName="selected">
                 Home
@@ -71,7 +71,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/History" activeClassName="selected">
                 History
@@ -81,7 +81,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/New_Session" activeClassName="selected">
                 New Session
@@ -91,7 +91,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/Help" activeClassName="selected">
                 Help
@@ -101,7 +101,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/Authers" activeClassName="selected">
                 Authers
@@ -111,7 +111,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo" />
               </div>
               <NavLink exact to="/About" activeClassName="selected">
                 About Mechanisim
@@ -121,7 +121,7 @@ function NavBar() {
 
             <div className="Link">
               <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo"  />
               </div>
               <NavLink exact to="/Contact" activeClassName="selected">
                 Contact

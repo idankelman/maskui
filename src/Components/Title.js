@@ -25,7 +25,7 @@ function Title(params) {
                 <button>Search</button>
             </div>
             <div className="Logo">
-                <img src={logo} />
+                <img src={logo} alt = "logo" />
             </div>
         </div>
     );

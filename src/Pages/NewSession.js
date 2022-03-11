@@ -1,8 +1,8 @@
 
 
+import { NavLink } from "react-router-dom";
 import Person from "../Components/Person";
 import Title from "../Components/Title";
-
 
 function NewSession() {
 
@@ -19,7 +19,13 @@ function NewSession() {
                     </div>
 
                     <div className="Anlyze">
-                        <button><h2>Statistics</h2></button>
+                        
+                            <NavLink exact to ="/Statistics">
+                            <button>
+                                <h2>Statistics</h2>
+                            </button>
+
+                            </NavLink>
                     </div>
                 </div>
                 <div className="Right">

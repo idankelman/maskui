@@ -5,7 +5,7 @@ function Person() {
     return (
         <div className ="Person">
             <button >
-                <img src ={logo}></img>
+                <img src ={logo} alt = "logo" ></img>
             </button>
         </div>
     );
