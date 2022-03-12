@@ -34,7 +34,7 @@ function NewSession() {
                             Live Capture
                             <div className="Stream">
                                 {/* <h1>Stream</h1> */}
-                                <img src="https://d3lkc3n5th01x7.cloudfront.net/wp-content/uploads/2020/04/01023335/MaskDetection_Banner-1-1.png" alt="mask" />
+                                <img src={'http://localhost:5000/video'} alt="mask" />
                             </div>
                         </div>
                     </div>
