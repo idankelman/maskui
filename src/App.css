@@ -452,13 +452,11 @@
   }
 }
 
-
-
 /* =========================================================== */
 /* Authers                                                      */
 /* =========================================================== */
 
-.Authers{
+.Authers {
   display: flex;
   width: 100%;
   height: 100%;
@@ -470,7 +468,7 @@
   transition: all ease 0.5s;
 }
 
-.Authers .Content{
+.Authers .Content {
   display: flex;
   width: 100%;
   height: 100%;
@@ -482,8 +480,7 @@
   transition: all ease 0.5s;
 }
 
-
-.Authers .Content .Top{
+.Authers .Content .Top {
   display: flex;
   width: 100%;
   height: 100%;
@@ -497,13 +494,13 @@
   background-color: white;
 }
 
-.Authers .Content .Top img{
+.Authers .Content .Top img {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-.Authers .Content .Authers-Container{
+.Authers .Content .Authers-Container {
   display: flex;
   width: 80%;
   height: 100%;
@@ -518,7 +515,7 @@
   background-color: white;
 }
 
-.Authers .Content .Authers-Container .Auther{
+.Authers .Content .Authers-Container .Auther {
   display: flex;
   width: 100%;
   height: 100%;
@@ -537,7 +534,7 @@
   margin-left: 40px;
 }
 
-.Authers .Content .Authers-Container .Auther .Name{
+.Authers .Content .Authers-Container .Auther .Name {
   display: flex;
   width: 100%;
   height: 100%;
@@ -552,43 +549,42 @@
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-.Authers .Content .Authers-Container .Auther .Pic{
-    display: flex;
-    aspect-ratio: 1;
-    min-width: 100px;
-    max-width: 100px;
-    max-width: 300px;
-    max-height: 300px;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border-radius: 100%;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: var(--NavHov);
-    filter:grayscale(1) ;
-
+.Authers .Content .Authers-Container .Auther .Pic {
+  display: flex;
+  aspect-ratio: 1;
+  min-width: 100px;
+  max-width: 100px;
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--NavHov);
+  filter: grayscale(1);
 }
 
-.Authers .Content .Authers-Container .Auther .Pic:hover{
+.Authers .Content .Authers-Container .Auther .Pic:hover {
   background-color: white;
   box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
     rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    /* change grayscale */
-    filter:grayscale(0) ;
+  /* change grayscale */
+  filter: grayscale(0);
 
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-.Authers .Content .Authers-Container .Auther .Pic img{
+.Authers .Content .Authers-Container .Auther .Pic img {
   display: flex;
   width: 95%;
   height: 95%;
   border-radius: 100%;
 }
 
-.Authers .Content .Authers-Container .Auther .Description{
+.Authers .Content .Authers-Container .Auther .Description {
   display: flex;
   width: 80%;
   height: 100%;
@@ -608,7 +604,7 @@
   margin-left: 40px;
 }
 
-.Authers .Content .Authers-Container .Auther .Links{
+.Authers .Content .Authers-Container .Auther .Links {
   display: flex;
   width: 90%;
   height: 100%;
@@ -624,7 +620,7 @@
   margin-left: 40px;
 }
 
-.Authers .Content .Authers-Container .Auther .Links a{
+.Authers .Content .Authers-Container .Auther .Links a {
   display: flex;
   width: 100%;
   height: 100%;
@@ -636,32 +632,26 @@
   margin-right: 5px;
   aspect-ratio: 1;
 }
-.Authers .Content .Authers-Container .Auther .Links a:hover{
+.Authers .Content .Authers-Container .Auther .Links a:hover {
   background-color: var(--SoftColor);
 }
 
-.Authers .Content .Authers-Container .Auther .Links a:hover > img{
+.Authers .Content .Authers-Container .Auther .Links a:hover > img {
   /* filter: invert(1); */
   transform: scale(1.5);
 }
 
-
-
 @media only screen and (max-width: 950px) {
-  .Authers .Content .Authers-Container{
+  .Authers .Content .Authers-Container {
     flex-direction: column;
     min-width: unset;
     /* font-size: 1.2rem; */
-    
   }
   .Authers .Content .Authers-Container .Auther {
     /* font-size: 1.2rem; */
     min-width: unset;
-
   }
 }
-
-
 
 /* =========================================================== */
 /* Navbar                                                      */
@@ -1039,14 +1029,11 @@
   /* width:0px; */
 }
 
-
-
 /* =========================================================== */
 /* Charts                                                      */
 /* =========================================================== */
 
-
-.ChartHolder{
+.ChartHolder {
   width: 100%;
   height: 500px;
   border-radius: 20px;
@@ -1057,20 +1044,161 @@
 
   padding-top: 50px;
   padding-bottom: 50px;
-  
-  background-color: white; 
-  box-shadow: -10px -10px 12px rgba(70,70,70,0.07),
-              10px 10px 12px rgba(255,255,255,0.8);
+
+  background-color: white;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
 
   margin-top: 70px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 70px;
+}
+
+.ChartHolder #Changer {
+  width: 100px;
+  height: 50px;
+}
+
+/* =========================================================== */
+/* Calender                                                     */
+/* =========================================================== */
+
+
+
+.History .Calendar{
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+  justify-content: center;
+  /* max-height: 400px; */
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.react-calendar {
+  display: flex;
+  width: 90%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
+}
+.react-calendar *{
+  font-family: 'Roboto', sans-serif;
+  /* display: flex; */
+}
+
+.react-calendar .react-calendar__navigation{
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: var(--NavHov); */
+  border-radius: 20px;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+  border-radius: 20px;
+
+}
+
+.react-calendar .react-calendar__navigation button {
+  width: 100px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: var(--NavText);
+}
+
+.react-calendar__viewContainer {
+  
+  padding-top: 20px;
+  /* padding-left: 40px; */
+  width: 90%;
+  height: 100%;
+  /* margin-top: ; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 20px;
+
+}
+
+.react-calendar__month-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 1.5rem;
+  text-align: center;
+
+  border-radius: 20px;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
+}
+
+.react-calendar__month-view__days{
+  display: flex;
+  align-self: center;
+  width: 100%;
+  height: 80%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  /* margin-right: 40px; */
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 1.5rem;
+  text-align: center;
+
 
   
 }
 
-.ChartHolder #Changer{
-  width: 100px;
-  height: 50px;
+.react-calendar__month-view__days button{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  min-height: 40px;
+  min-width: 40px;
+
+  aspect-ratio: 1;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  /* box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.17),
+  10px 10px 12px rgba(255, 255, 255, 0.8);
+  color: var(--NavText); */
+}
+
+.react-calendar__month-view__days button:hover{
+
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.17),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
 }
