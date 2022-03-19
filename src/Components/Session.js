@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Session(params) {
   return (
@@ -13,8 +14,10 @@ function Session(params) {
           <h3>duration : {params.duration}</h3>
         </div>
         <div className="Actions">
-        <button>Show Stats</button>
-        {/* <button>Explore</button> */}
+          <NavLink exact to="/Statistics">
+            <button>Show Stats</button>
+          </NavLink>
+          {/* <button>Explore</button> */}
         </div>
       </div>
     </div>

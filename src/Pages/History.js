@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import Session from "../Components/Session";
 
-// import "react-calendar/dist/Calendar.css";
 
 function History() {
   const My_Sessions = [
@@ -41,20 +40,19 @@ function History() {
 
   const [value, setDate] = useState(new Date());
   const [Filter,setFilter] = useState("");
-  const Sessions =[];
+//   let Sessions =[];
+  let [Sessions,setSession] = useState([]);
 
   const onChange = (date) => {
-    console.log(date);
-    console.log(My_Sessions.map((session) => new Date(Date.parse(session.date))));
     setDate(date);
     let dateSetter = ParseDate(date);
     setFilter(dateSetter);
-    console.log(dateSetter);
   };
 
   function filterSessions(filter = Filter) {
     let filteredSessions = My_Sessions.filter((session) => session.date === filter);
     let Sorted = filteredSessions.sort((a, b) => { return a.time > b.time ? 1 : -1 });
+    Sessions = (Sorted);
     return Sorted;
   }
 
@@ -84,18 +82,18 @@ function History() {
       <Title title="History" />
       <div className="Calendar">
         <Calendar onChange={onChange} value={value} tileClassName={(date) => {
-            // console.log(My_Sessions[2].date,ParseDate(date.date));
             if(checkDates().includes(ParseDate(date.date)))
                 return 'highlight'; 
             return '';
         }}/>
 
       </div>
-      {(Sessions.length === 0)? <h2>No Sessions For This Date</h2> : null}
       <div className="Sessions">
+        {(filterSessions().length== 0)? <h2>No Sessions For This Date</h2>:""}
         {filterSessions().map((s) =>
         <Session date = {s.date} key={s.id} duration ={s.duration} time = {s.time} />)}
         </div>
+
     </div>
   );
 }

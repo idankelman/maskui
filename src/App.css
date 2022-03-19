@@ -1389,10 +1389,17 @@ abbr[title] {
   border: none;
   cursor: pointer;
   transition: all ease 0.5s;
+  
 }
+
+.Sessions .Session .Session_Content .Actions a{
+  font-style: normal;
+  text-decoration: none;
+}
+
 
 .Sessions .Session .Session_Content .Actions button:hover{
   background-color: var(--NavText);
-  color: var(--NavWidth);
+  color: var(--NavHov) ;
   transition: all ease 0.5s;
 }
