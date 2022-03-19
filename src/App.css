@@ -1160,11 +1160,13 @@
 .react-calendar__month-view__days__day--weekend {
   /* color: #d10000; */
 }
-.react-calendar__month-view__days__day--neighboringMonth {
+
+
+.react-calendar__month-view__days__day--neighboringMonth , .react-calendar__month-view__days__day--neighboringMonth .highlight{
   /* color: #757575; */
   /* disabled: true; */
   pointer-events: none;
-  color:transparent;
+  color: transparent !important;;
   transition: all 0s !important;
 
 }
@@ -1229,11 +1231,31 @@
 
 }
 .react-calendar--selectRange .react-calendar__tile--hover {
-  background-color: #e6e6e6;
+  background-color: var(--SoftColor);
+  color: black !important;
+  
 }
 
+.react-calendar__month-view__days__day.highlight{
+  background-color: #76baff; ;
+  color: white ;
+  transition: all ease 0.1s;
+
+}
+
+.react-calendar__month-view__days__day.highlight:hover{
+  background-color: var(--SecondaryColor) !important  ;
+  color: black !important; 
+  transition: all ease 0.1s;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth.highlight{
+  background-color: transparent !important;
+}
+
+
 .react-calendar__month-view__days__day--neighboringMonth:hover {
-  background-color: transparent!important;
+  background-color: transparent !important;
   cursor: default!important;
   transition: all 0s !important;
 
@@ -1244,11 +1266,7 @@ abbr[title] {
   text-decoration: none !important;
 }
 
-.highlight{
-  background-color: #76baff ;
-  color: white !important;
 
-}
 
 /* =========================================================== */
 /* Session                                      */
