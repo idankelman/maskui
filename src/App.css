@@ -1066,139 +1066,340 @@
 
 
 
-.History .Calendar{
-  display: flex;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: 40px;
-  justify-content: center;
-  /* max-height: 400px; */
-  align-items: center;
-  flex-direction: column;
 
-}
+/* =========================================================== */
+/* Calender - from node                                        */
+/* =========================================================== */
+
+
 
 .react-calendar {
-  display: flex;
-  width: 90%;
-  height: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
-    10px 10px 12px rgba(255, 255, 255, 0.8);
-}
-.react-calendar *{
-  font-family: 'Roboto', sans-serif;
-  /* display: flex; */
-}
-
-.react-calendar .react-calendar__navigation{
-  width: 100%;
-  height: 100%;
-  min-height: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* background-color: var(--NavHov); */
-  border-radius: 20px;
-  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
-    10px 10px 12px rgba(255, 255, 255, 0.8);
-  font-size: 2rem;
-  border-radius: 20px;
-
-}
-
-.react-calendar .react-calendar__navigation button {
-  width: 100px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  font-size: 2rem;
-  color: var(--NavText);
-}
-
-.react-calendar__viewContainer {
-  
-  padding-top: 20px;
-  /* padding-left: 40px; */
-  width: 90%;
-  height: 100%;
-  /* margin-top: ; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  border-radius: 20px;
-
-}
-
-.react-calendar__month-view {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  font-size: 1.5rem;
-  text-align: center;
-
-  border-radius: 20px;
-  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
-    10px 10px 12px rgba(255, 255, 255, 0.8);
-}
-
-.react-calendar__month-view__days{
-  display: flex;
-  align-self: center;
-  width: 100%;
-  height: 80%;
+  /* width: 350px; */
+  max-width: 100%;
   margin-top: 40px;
   margin-bottom: 40px;
-  margin-left: 40px;
-  /* margin-right: 40px; */
+  margin-left: 10%;
+  margin-right:10%;
+  padding-bottom:80px;
+  background: white;
+  /* border: 1px solid #a0a096; */
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+    10px 10px 12px rgba(255, 255, 255, 0.8);
+}
+.react-calendar--doubleView {
+  width: 700px;
+}
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 50%;
+  margin: 0.5em;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.react-calendar button {
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-top: 1em;
+  /* padding-top: 40px; */
+  margin-bottom: 0.5em;
+  border-radius: 40px;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  background: none;
+}
+.react-calendar__navigation button:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: var(--SoftColor);
+
+}
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 1.4em;
+  /* font-style: none; */
+  /* text-decoration: underline; */
+  
+}
+.react-calendar__month-view__weekdays__weekday {
+  padding: 1.5em;
+}
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75em;
+  font-weight: bold;
+}
+.react-calendar__month-view__days__day--weekend {
+  /* color: #d10000; */
+}
+
+
+.react-calendar__month-view__days__day--neighboringMonth , .react-calendar__month-view__days__day--neighboringMonth .highlight{
+  /* color: #757575; */
+  /* disabled: true; */
+  pointer-events: none;
+  color: transparent !important;;
+  transition: all 0s !important;
+
+}
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+.react-calendar__tile {
+  max-width: 100%;
+  display: flex;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  font-size: 1.5rem;
+  padding: 10px 6.6667px;
+  background: none;
+  font-size: 1.2em;
   text-align: center;
+  line-height: 16px;
+  border-radius: 4px;
+  transition: all ease 0.2s
+}
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: var(--MainColor);
+  transition: all ease 0.2s
+
+}
+.react-calendar__tile--now {
+  background-color: var(--SoftColor);
+  transition: all ease 0.2s
 
 
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  /* background: #133076; */
+}
+.react-calendar__tile--hasActive {
+  background: #76baff;
+  transition: all ease 0.2s
+
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: var(--SoftColor);
+}
+.react-calendar__tile--active {
+  background: royalblue;
+  color: white;
+  transition: all ease 0.2s
+
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: royalblue;
+  transition: all ease 0.2s
+
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: var(--SoftColor);
+  color: black !important;
   
 }
 
-.react-calendar__month-view__days button{
+.react-calendar__month-view__days__day.highlight{
+  background-color: #76baff; ;
+  color: white ;
+  transition: all ease 0.1s;
+
+}
+
+.react-calendar__month-view__days__day.highlight:hover{
+  background-color: var(--SecondaryColor) !important  ;
+  color: black !important; 
+  transition: all ease 0.1s;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth.highlight{
+  background-color: transparent !important;
+}
+
+
+.react-calendar__month-view__days__day--neighboringMonth:hover {
+  background-color: transparent !important;
+  cursor: default!important;
+  transition: all 0s !important;
+
+}
+
+abbr[title] {
+  cursor: default !important;
+  text-decoration: none !important;
+}
+
+
+
+/* =========================================================== */
+/* Session                                      */
+/* =========================================================== */
+
+
+.Sessions{
+
+  display: flex;
+  /* display: grid; */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  width: 80%;
+  height: 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 40px;
+
+  /* cursor: pointer; */
+  transition: all ease 0.5s;
+
+
+}
+
+.Sessions .Session{
+
+  /* display: flex; */
+  display: flex;
+  min-width: 400px;
+  min-height: 300px;
+  width: 80%;
+  height: 100%;
+  /* width:400px; */
+  /* height:400px; */
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top:50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+  10px 10px 12px rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  transition: all ease 0.5s;
+  
+  
+}
+
+.Sessions .Session .Session_Title{
+  
   display: flex;
   width: 100%;
   height: 100%;
-  min-height: 40px;
-  min-width: 40px;
-
-  aspect-ratio: 1;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 100%;
+  max-height: 300px;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
-  border: none;
+  flex-direction: column;
+  line-height: 0.5em;
+  margin-bottom: 40px;
   font-size: 1.5rem;
-  /* box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.17),
-  10px 10px 12px rgba(255, 255, 255, 0.8);
-  color: var(--NavText); */
+  color: var(--NavText);
+
 }
 
-.react-calendar__month-view__days button:hover{
+.Sessions .Session .Session_Content{
 
-  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.17),
-    10px 10px 12px rgba(255, 255, 255, 0.8);
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--NavWidth);
+
+}
+
+.Sessions .Session .Session_Content .details{
+  display: flex;
+  width: 100%;
+  margin-left: 40px;
+  font-family: monospace !important;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* line-height: 5px; */
+  font-weight: normal !important;
+}
+
+.Sessions .Session .Session_Content .Actions{
+  display: flex;
+  width: 100%;
+  margin-right: 40px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  /* line-height: 5px; */
+  font-weight: normal !important;
+}
+
+.Sessions .Session .Session_Content .Actions button{
+  display: flex;
+  /* margin-top: 20px; */
+  min-width: 100px;
+  min-height: 100px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  max-width: 200px;
+  background-color: var(--NavHov);
+  color: var(--NavText);
+  font-size: 0.75rem;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  
+}
+
+.Sessions .Session .Session_Content .Actions a{
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+.Sessions .Session .Session_Content .Actions button:hover{
+  background-color: var(--NavText);
+  color: var(--NavHov) ;
+  transition: all ease 0.5s;
 }
