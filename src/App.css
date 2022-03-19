@@ -1244,6 +1244,11 @@ abbr[title] {
   text-decoration: none !important;
 }
 
+.highlight{
+  background-color: #76baff ;
+  color: white !important;
+
+}
 
 /* =========================================================== */
 /* Session                                      */

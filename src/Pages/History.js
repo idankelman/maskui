@@ -2,6 +2,7 @@ import Title from "../Components/Title";
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import Session from "../Components/Session";
+
 // import "react-calendar/dist/Calendar.css";
 
 function History() {
@@ -44,17 +45,9 @@ function History() {
 
   const onChange = (date) => {
     console.log(date);
+    console.log(My_Sessions.map((session) => new Date(Date.parse(session.date))));
     setDate(date);
-    let month = (date.getMonth()+1).toString();
-    if(month.length === 1){
-        month = "0" + month;
-    }
-    let day = date.getDate().toString();
-    if(day.length === 1){
-        day = "0" + day;
-    }
-    let year = date.getFullYear().toString();
-    let dateSetter = year + "-" + month + "-" + day;
+    let dateSetter = ParseDate(date);
     setFilter(dateSetter);
     console.log(dateSetter);
   };
@@ -65,11 +58,38 @@ function History() {
     return Sorted;
   }
 
+
+  function ParseDate(date){
+    let month = (date.getMonth()+1).toString();
+    if(month.length === 1){
+        month = "0" + month;
+    }
+    let day = date.getDate().toString();
+    if(day.length === 1){
+        day = "0" + day;
+    }
+    let year = date.getFullYear().toString();
+    let dateSetter = year + "-" + month + "-" + day;
+    return dateSetter;
+  }
+
+
+  function checkDates(){
+    let Copy = My_Sessions.map((session) => session.date);
+    return Copy; 
+  }
+
   return (
     <div className="History">
       <Title title="History" />
       <div className="Calendar">
-        <Calendar onChange={onChange} value={value} />
+        <Calendar onChange={onChange} value={value} tileClassName={(date) => {
+            // console.log(My_Sessions[2].date,ParseDate(date.date));
+            if(checkDates().includes(ParseDate(date.date)))
+                return 'highlight'; 
+            return '';
+        }}/>
+
       </div>
       {(Sessions.length === 0)? <h2>No Sessions For This Date</h2> : null}
       <div className="Sessions">
