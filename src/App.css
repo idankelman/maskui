@@ -1322,7 +1322,7 @@ abbr[title] {
   font-family: monospace !important;
   justify-content: flex-start;
   flex-direction: column;
-  line-height: 5px;
+  /* line-height: 5px; */
   font-weight: normal !important;
 }
 
@@ -1332,7 +1332,7 @@ abbr[title] {
   margin-right: 40px;
   justify-content: flex-end;
   flex-direction: column;
-  line-height: 5px;
+  /* line-height: 5px; */
   font-weight: normal !important;
 }
 

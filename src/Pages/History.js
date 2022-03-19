@@ -33,14 +33,14 @@ function History() {
     {
       id: 5,
       date: "2022-03-01",
-      time: "10:00",
+      time: "14:00",
       duration: "1 hour",
     },
   ];
 
   const [value, setDate] = useState(new Date());
-  const [Sessions, setSessions] = useState(My_Sessions);
   const [Filter,setFilter] = useState("");
+  const Sessions =[];
 
   const onChange = (date) => {
     console.log(date);
@@ -60,8 +60,9 @@ function History() {
   };
 
   function filterSessions(filter = Filter) {
-    var filteredSessions = My_Sessions.filter((session) => session.date === filter);
-    return filteredSessions;
+    let filteredSessions = My_Sessions.filter((session) => session.date === filter);
+    let Sorted = filteredSessions.sort((a, b) => { return a.time > b.time ? 1 : -1 });
+    return Sorted;
   }
 
   return (
@@ -70,6 +71,7 @@ function History() {
       <div className="Calendar">
         <Calendar onChange={onChange} value={value} />
       </div>
+      {(Sessions.length === 0)? <h2>No Sessions For This Date</h2> : null}
       <div className="Sessions">
         {filterSessions().map((s) =>
         <Session date = {s.date} key={s.id} duration ={s.duration} time = {s.time} />)}
