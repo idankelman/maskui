@@ -1243,3 +1243,117 @@ abbr[title] {
   cursor: default !important;
   text-decoration: none !important;
 }
+
+
+/* =========================================================== */
+/* Session                                      */
+/* =========================================================== */
+
+
+.Sessions{
+
+  display: flex;
+  width: 80%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 20px;
+  padding-bottom: 40px;
+
+  /* cursor: pointer; */
+  transition: all ease 0.5s;
+
+
+}
+
+.Sessions .Session{
+
+  display: flex;
+  width: 90%;
+  height: 100%;
+  margin-left: 20px;
+  margin-top:50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: -10px -10px 12px rgba(70, 70, 70, 0.07),
+  10px 10px 12px rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  transition: all ease 0.5s;
+  
+  
+}
+
+.Sessions .Session .Session_Title{
+  
+  display: flex;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 0.5em;
+  margin-bottom: 40px;
+  font-size: 1.5rem;
+  color: var(--NavText);
+
+}
+
+.Sessions .Session .Session_Content{
+
+  display:flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  background-color: var(--NavWidth);
+
+}
+
+.Sessions .Session .Session_Content .details{
+  display: flex;
+  width: 100%;
+  margin-left: 40px;
+  font-family: monospace !important;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 5px;
+  font-weight: normal !important;
+}
+
+.Sessions .Session .Session_Content .Actions{
+  display: flex;
+  width: 100%;
+  margin-right: 40px;
+  justify-content: flex-end;
+  flex-direction: column;
+  line-height: 5px;
+  font-weight: normal !important;
+}
+
+.Sessions .Session .Session_Content .Actions button{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--NavHov);
+  color: var(--NavText);
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+
+.Sessions .Session .Session_Content .Actions button:hover{
+  background-color: var(--NavText);
+  color: var(--NavWidth);
+  transition: all ease 0.5s;
+}
