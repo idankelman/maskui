@@ -9,11 +9,12 @@ function Session(params) {
       </div>
       <div className="Session_Content">
         <div className="details">
-          <h2>Content of the duration</h2>
-          <h2>duration : {params.duration}</h2>
+          <h3>duration : {params.duration}</h3>
+          <h3>duration : {params.duration}</h3>
         </div>
         <div className="Actions">
-          <button>go</button>
+        <button>Show Stats</button>
+        {/* <button>Explore</button> */}
         </div>
       </div>
     </div>

@@ -14,13 +14,13 @@ function History() {
     },
     {
       id: 2,
-      date: "2022-01-01",
+      date: "2022-03-01",
       time: "14:00",
       duration: "1 hour",
     },
     {
       id: 3,
-      date: "2020-1-1",
+      date: "2022-03-01",
       time: "11:00",
       duration: "1 hour",
     },
@@ -28,7 +28,7 @@ function History() {
       id: 4,
       date: "2022-03-01",
       time: "12:00",
-      duration: "1 hour",
+      duration: "4 hour",
     },
     {
       id: 5,
