@@ -47,9 +47,9 @@ function Title(params) {
     }
 
 
-    function onCloseModal() {
-        modal & setModal(!modal);
-    }
+    // function onCloseModal() {
+    //     modal & setModal(!modal);
+    // }
 
     function toggleModal() {
         setModal(!modal);

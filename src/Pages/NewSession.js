@@ -34,7 +34,8 @@ function NewSession() {
                             Live Capture
                             <div className="Stream">
                                 {/* <h1>Stream</h1> */}
-                                <img src={'http://localhost:5000/video'} alt="mask" />
+                                {/* <img src={'http://localhost:5000/video'} alt="mask" /> */}
+                                <img src={'http://marina.art-net.co.il:120/mjpg/video.mjpg'} alt="mask" />
                             </div>
                         </div>
                     </div>
