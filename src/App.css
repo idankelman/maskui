@@ -7,6 +7,17 @@
   --BgColor: #f7f9fc;
   --NavWidth: 275px;
   --SoftColor: #f8f9fd;
+  
+  --modal_max_width: 500px;
+  --modal_max_height: 1200px;
+  --modal_min_width: 300px;
+  --modal_min_height: 800px;
+  --modal_background_color: white;
+  --modal_border_radius: 10px;
+  /* --modal_box_shadow: -10px -10px 40px rgba(255, 255, 255, 0.6),
+    10px 10px 20px rgba(70, 70, 70, 0.4); */
+  --modal_transition: all ease 0.3s;
+  --modal_padding: 20px;
 }
 
 .App {
@@ -1404,3 +1415,185 @@ abbr[title] {
   color: var(--NavHov) ;
   transition: all ease 0.5s;
 }
+
+
+
+/* =========================================================== */
+/* Modal                                      */
+/* =========================================================== */
+
+
+
+
+/* root variables */
+
+.Modal .Wrapper{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+
+
+.Modal .modal-fade-enter-active {
+  transition: opacity .3s ease;
+}
+
+.Modal .modal-fade{
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.Modal .modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* margin-top: 150px; */
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 80%;
+    max-width: var(--modal_max_width);
+    max-height: var(--modal_max_height);
+    overflow: auto;
+    background-color: var(--modal_background_color);
+    border-radius: var(--modal_border_radius);
+    box-shadow: var(--modal_box_shadow);
+    padding: var(--modal_padding);
+    transition: all ease 0.2s;
+}
+
+.Modal .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    /* border: 1px solid #888; */
+    width: 90%;
+}
+
+.Modal .modal-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Modal .modal-header button{
+    background-color: transparent;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0;
+    cursor: pointer;
+}
+
+.Modal .modal-title{
+    font-size: 0.75em;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+.Modal .modal-body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Modal .modal-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Modal .modal-footer button{
+    display: flex;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -10px -10px 40px rgba(255, 255, 255, 0.6),
+    10px 10px 20px rgba(70, 70, 70, 0.4);
+    transition: all ease 0.3s;
+    font-family: monospace;
+    font-size: 15px;
+
+}
+
+.Modal .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal-body .Item{
+  display :flex;
+  height: 65px;
+  width: 100%;
+  margin-bottom: 15px;
+  flex-direction: row;
+}
+
+.modal-body .Item  a  {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  /* margin-left:10%; */
+  font-style: normal;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  transition: all ease 0.2s;
+
+}
+
+
+.modal-body .Item  a .element {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-body .Item  a .Image {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+
+.modal-body .Item  a .Image img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-body .Item  a .Name{
+  display: flex;
+  font-size: 0.75em;
+  font-style: normal;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  
+}
+
+.modal-body .Item:hover{
+  box-shadow: -10px -10px 40px rgba(255, 255, 255, 0.6),
+     10px 10px 20px rgba(70, 70, 70, 0.4);
+  transition: all ease 0.3s;
+  border-radius: 20px;
+  }

@@ -89,7 +89,7 @@ function History() {
 
       </div>
       <div className="Sessions">
-        {(filterSessions().length== 0)? <h2>No Sessions For This Date</h2>:""}
+        {(filterSessions().length=== 0)? <h2>No Sessions For This Date</h2>:""}
         {filterSessions().map((s) =>
         <Session date = {s.date} key={s.id} duration ={s.duration} time = {s.time} />)}
         </div>
