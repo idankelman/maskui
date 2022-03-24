@@ -8,6 +8,7 @@ function Title(params) {
 
 
     const [modal, setModal] = useState(false);
+    const Search = useRef();
     const DUMMY_DATA = [
         {
             id: 1,
@@ -27,9 +28,23 @@ function Title(params) {
         },
     ];
 
+    let FilteredData = [];
+
     //=========================================================
     //     Fuctions
     //=========================================================
+
+
+    function filterQuery(){
+        let query = Search.target.value;
+        console.log(query);
+        FilteredData = DUMMY_DATA;
+        FilteredData.filter((elem)=>{
+            elem.name.indexOf(query)<0? 1:0
+        })
+
+    }
+
 
     function onCloseModal() {
         modal & setModal(!modal);
@@ -50,7 +65,7 @@ function Title(params) {
             </div>
             <div className="Search">
                 <div className="InputBox">
-                    <input type="text" />
+                    <input type="text" ref = {Search} onKeyPress = {filterQuery}/>
                 </div>
                 <button onClick= {toggleModal}>Search</button>
             </div>
