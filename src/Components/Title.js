@@ -9,6 +9,7 @@ function Title(params) {
 
     const [modal, setModal] = useState(false);
     const Search = useRef();
+    const [FilteredData , setData] = useState([]);
     const DUMMY_DATA = [
         {
             id: 1,
@@ -28,21 +29,21 @@ function Title(params) {
         },
     ];
 
-    let FilteredData = [];
 
     //=========================================================
     //     Fuctions
     //=========================================================
 
 
-    function filterQuery(){
-        let query = Search.target.value;
-        console.log(query);
-        FilteredData = DUMMY_DATA;
-        FilteredData.filter((elem)=>{
-            elem.name.indexOf(query)<0? 1:0
-        })
+    function filterQuery() {
+        let query = Search.current.value;
+        let temp = DUMMY_DATA.filter(item => {
+            return item.name.toLowerCase().includes(query.toLowerCase());
+        });
+        setData(temp);
 
+        // console.log(query);
+        // console.log(temp);
     }
 
 
@@ -50,7 +51,7 @@ function Title(params) {
         modal & setModal(!modal);
     }
 
-    function toggleModal(){
+    function toggleModal() {
         setModal(!modal);
     }
 
@@ -65,15 +66,15 @@ function Title(params) {
             </div>
             <div className="Search">
                 <div className="InputBox">
-                    <input type="text" ref = {Search} onKeyPress = {filterQuery}/>
+                    <input type="text" ref={Search} onKeyDown = {filterQuery} onKeyUp = {filterQuery} />
                 </div>
-                <button onClick= {toggleModal}>Search</button>
+                <button onClick={toggleModal}>Search</button>
             </div>
             <div className="Logo">
                 <img src={logo} alt="logo" />
             </div>
             {modal ?
-                <Modal  trigger ={toggleModal} data = {DUMMY_DATA}></Modal> :
+                <Modal trigger={toggleModal} data={FilteredData}></Modal> :
                 null}
         </div>
     );
