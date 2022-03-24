@@ -5,22 +5,27 @@ import { withRouter } from "react-router-dom";
 
 function Modal(params) {
 
+
+    function triggerClose(){
+        params.trigger();
+    }
+
     return (
         <div className="Modal">
             <div className="Wrapper">
-                <div id="simple-modal" class="modal fade" tabindex="-1">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" onClick={params.toggle} >
+                <div id="simple-modal" className="modal fade" tabIndex="-1">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                <button type="button" className="close" data-dismiss="modal" onClick={triggerClose} >
                                     &times;
                                 </button>
-                                <h4 class="modal-title">Search Apperances</h4>
+                                <h4 className="modal-title">Search Apperances</h4>
                             </div>
-                            <div class="modal-body">
+                            <div className="modal-body">
                                 {params.data.map(item => {
                                     return (
-                                        <div className="Item">
+                                        <div className="Item" key= {item.id}>
                                             <NavLink to={`/appearance/${item.id}`}>
                                                 <div className="Image">
                                                     <img src={item.image} alt="image" />

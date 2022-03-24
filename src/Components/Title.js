@@ -8,7 +8,6 @@ function Title(params) {
 
 
     const [modal, setModal] = useState(false);
-    const SearchModal = useRef(null);
     const DUMMY_DATA = [
         {
             id: 1,
@@ -32,8 +31,8 @@ function Title(params) {
     //     Fuctions
     //=========================================================
 
-    function filterProps() {
-        setModal(!modal);
+    function onCloseModal() {
+        modal & setModal(!modal);
     }
 
     function toggleModal(){
@@ -59,7 +58,7 @@ function Title(params) {
                 <img src={logo} alt="logo" />
             </div>
             {modal ?
-                <Modal ref={SearchModal} onClick={toggleModal} toggle ={toggleModal} data = {DUMMY_DATA}></Modal> :
+                <Modal  trigger ={toggleModal} data = {DUMMY_DATA}></Modal> :
                 null}
         </div>
     );

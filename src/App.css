@@ -1453,8 +1453,10 @@ abbr[title] {
     position: absolute;
     top: 50%;
     left: 50%;
+    /* margin-top: 150px; */
     transform: translate(-50%, -50%);
     width: 100%;
+    height: 80%;
     max-width: var(--modal_max_width);
     max-height: var(--modal_max_height);
     overflow: auto;
@@ -1470,7 +1472,7 @@ abbr[title] {
     margin: auto;
     padding: 20px;
     /* border: 1px solid #888; */
-    width: 80%;
+    width: 90%;
 }
 
 .Modal .modal-header{
@@ -1493,7 +1495,7 @@ abbr[title] {
 }
 
 .Modal .modal-title{
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     font-family: monospace;
 }
@@ -1534,4 +1536,43 @@ abbr[title] {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+
+.modal-body .Item{
+  display :flex;
+  height: 300px;
+  width: 100%;
+  flex-direction: row;
+}
+
+.modal-body .Item  a  {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+
+.modal-body .Item  a .Image {
+  display: flex;
+  width: 100px;
+  height: 100px;
+}
+
+.modal-body .Item  a .Image img{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-body .Item  a .Name{
+  display: flex;
+  font-size: 1em;
+  font-style: normal;
+  text-decoration: none;
+  color: black;
+  
 }
