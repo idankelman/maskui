@@ -6,7 +6,7 @@ import { withRouter } from "react-router-dom";
 function Modal(params) {
 
 
-    function triggerClose(){
+    function triggerClose() {
         params.trigger();
     }
 
@@ -25,19 +25,20 @@ function Modal(params) {
                             <div className="modal-body">
                                 {params.data.map(item => {
                                     return (
-                                        <div className="Item" key= {item.id}>
-                                            <NavLink to={`/appearance/${item.id}`}>
-                                                <div className="Image">
-                                                    <img src={item.image} alt="image" />
-                                                </div>
-                                                <div className="Name">
-                                                    {item.name}
+                                        <div className="Item" key={item.id}>
+                                            <NavLink to={item.path}>
+                                                <div className="element">
+                                                    <div className="Image">
+                                                        <img src={item.image} alt="image" />
+                                                    </div>
+                                                    <div className="Name">
+                                                        {item.name}
+                                                    </div>
                                                 </div>
                                             </NavLink>
                                         </div>
                                     )
-                                })}                           
-                                {/* <ng-content></ng-content> */}
+                                })}
                             </div>
                         </div>
                     </div>
