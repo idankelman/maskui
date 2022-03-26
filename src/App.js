@@ -3,8 +3,8 @@
 import './App.css';
 import {Route} from 'react-router-dom';
 
-import Home from './Pages/Home.js';
-import NewSession from './Pages/NewSession.js';
+import Home from './Pages/Home.jsx';
+import NewSession from './Pages/NewSession.jsx';
 import History from './Pages/History.js';
 import NavBar from './Components/NavBar';
 import Help from './Pages/Help.js';

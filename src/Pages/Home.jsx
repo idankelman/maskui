@@ -44,5 +44,5 @@ const Home = () => {
             </div>
         </AnimatePage>
     );
-}
+};
 export default Home;
