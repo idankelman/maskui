@@ -1443,6 +1443,11 @@ abbr[title] {
   background-color: #0d2e60;
 }
 
+.About .description{
+  font-size: 12px;
+  overflow-y: auto;
+}
+
 .About  .right{
   display: flex;
   width: 100%;
