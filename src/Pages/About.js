@@ -1,4 +1,5 @@
 import Title from "../Components/Title";
+import Collection from "../Assets/about/Collection.jpg" 
 
 function About() {
     return (
@@ -7,28 +8,19 @@ function About() {
             <div className="top">
                 <div className="left">
                     <div className="header">
-                        <h1>top left head</h1>
+                        <h1>02 center left head</h1>
                     </div>
                     <div className="description">
-                        <h2>Covid has had a big impact on our lives. In order to prevent it, the government decided that
-people should start wearing masks in closed spaces. However, not everyone follows this law,
-and this is why the need to detect people with masks has risen. We want to be able to detect
-people that remove/ don't put on properly their mask in a public setting like theater / class .
-the software will only be able to detect whether or not a person has it's mask , and won't be
-able to detect faces for various reasons that make this ability unfeasible, more on that later.
-if the public setting is known, then the software will be able to know where exactly that
-person is sitting, and will be able to classify him ( the software will be able to detect the seat ,
-and in a case like theater , the people's seat is determined ahead of time/ in case like a
-classroom , the software will be able to show him , and know where he is sitting).
-The project is challenging and complicated from two aspects:
-Research aspect:
-• Investigating the optimal architecture of the model, and changing parameters to
-further optimize the accuracy.
-• Obtaining datasets that contains images of masked people of all kinds and colors.
-Applicative Aspect:
-• Developing a user friendly web application interface that will communicate with the
-camera, and will be able to log the its results.</h2>
-
+                        <h2>
+                        </h2>
+                        <p>In this project we will implement a mask detection system with a friendly user interface that
+will be able to control parameters and display important statistic such as the percentage of
+people wearing masks properly, and the location of the unmasked people at every frame.
+The program is written in python using visual studio code environment.
+The model will be trained using keras (TensorFlow) and image analysis will be implemented
+using OPENCV functions.
+Once we have our model weights ready, we load it and start capturing the video. The video is
+then spliced into frames and the segmentation phase begins</p>
                     </div>
                 </div>
                 <div className="right">
@@ -37,8 +29,8 @@ camera, and will be able to log the its results.</h2>
 
                     </div>
                     <div className="description">
-                        {/* <h2>top right des</h2> */}
-                        <img src = "" alt ="intro"></img>
+                        
+                        {/* <img src = {Collection} alt ="intro"></img> */}
                     </div>
                 </div>
             </div>
@@ -55,11 +47,17 @@ camera, and will be able to log the its results.</h2>
             <div className="About-content">
                 <div className="left">
                     <div className="header">
-                        <h1>center left head</h1>
+                        <h1>02 center left head</h1>
 
                     </div>
                     <div className="description">
                         <h2>center left cont</h2>
+                        <p>To slice all the faces in the frame, we use CV2 to detect all the faces using facial HaarCodes.
+The face cascade tries to detect faces based on the content of the HaarCodes, the one we are
+currently using is for fronal face. In order to take care of tilting faces, we try to detect in
+different angles. The cascade returns an array with a quadruple of x,y,w,z coordination,
+which are the dimensions of the rectangle around the face
+</p>
 
                     </div>
                 </div>
