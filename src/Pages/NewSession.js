@@ -36,6 +36,7 @@ function NewSession() {
             "change_daily": true
         }
     };
+    message = {"name":"__test__"};
 
 
 
@@ -53,7 +54,7 @@ function NewSession() {
     //==================================  Message   ================================
 
     useEffect(() => {
-        send_message(message);
+        // send_message(message);
     }, []);
 
 
@@ -64,10 +65,10 @@ function NewSession() {
 
     useEffect(() => {
         window.addEventListener("message", function (message) {
-            const response = message.data;
-
             //Analyzing the response , and adding it to the store
             try {
+                const response = message.data;
+                console.log(response);
 
                 //==================================  Toast   ================================
 
@@ -133,7 +134,7 @@ function NewSession() {
             <div className="Wrapper">
                 <div className="Left">
                     <div className="Start">
-                        <button><h2>Start seesion</h2></button>
+                        <button onClick={()=>send_message(message)}><h2>Start seesion</h2></button>
                         <button><h2>Choose Threshold</h2></button>
                     </div>
 

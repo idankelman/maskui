@@ -1,7 +1,13 @@
 export let ws = null
 let messages = []
 let last_token
+// const wb_url = "wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self";
+// const wb_url = "`wss://ws-api.enigma-x.app/?token=${token}`";
   
+var channelId = "channel_1";
+var clusterId = "demo";
+var apiKey = "oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm";
+const wb_url = `wss://${clusterId}.piesocket.com/v3/${channelId}?api_key=${apiKey}`;
 
 
 
@@ -9,7 +15,7 @@ export const init_ws = ({ token }) => {
   try {
     if ((ws === null || ws.readyState === 3) && token) {
       last_token = token
-      ws = new WebSocket(`wss://ws-api.enigma-x.app/?token=${token}`)
+      ws = new WebSocket(`wss://${clusterId}.piesocket.com/v3/${channelId}?api_key=${apiKey}`)
     }
 
     ws.onopen = () => {
