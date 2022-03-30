@@ -5,9 +5,10 @@ import { NavLink } from "react-router-dom";
 import Person from "../Components/Person";
 import Title from "../Components/Title";
 import { init_ws, send_message } from '../Services/Websocket'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-
+toast.configure()
 
 function NewSession() {
 
@@ -73,17 +74,17 @@ function NewSession() {
                 //==================================  Toast   ================================
 
 
-                // let test = JSON.stringify(response);
-                // if (test.search("execution") != -1) {
-                //     UpdateTransLog(test);
-                //     toast.info(test, {
-                //         className: "info-toast",
-                //         position: toast.POSITION.TOP_CENTER,
-                //         closeButton: false,
-                //         autoClose: 4000
-                //     });
-                //     return;
-                // }
+                let test = JSON.stringify(response);
+                if (test.search("Warnings") != -1) {
+                    UpdateTransLog(test);
+                    toast.info(test, {
+                        className: "info-toast",
+                        position: toast.POSITION.TOP_CENTER,
+                        closeButton: false,
+                        autoClose: 4000
+                    });
+                    return;
+                }
 
                 //==================================  add to the data   ================================
 
@@ -151,7 +152,6 @@ function NewSession() {
                 <div className="Right">
                     <div className="Top">
                         <div className="Container">
-                            Live Capture {TransLog?TransLog:ToastMessage}
                             <div className="Stream">
                                 {/* <h1>Stream</h1> */}
                                 {/* <img src={'http://localhost:5000/video'} alt="mask" /> */}
