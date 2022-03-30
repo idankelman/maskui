@@ -87,40 +87,7 @@ function NewSession() {
                 }
 
                 //==================================  add to the data   ================================
-
-
-                // let low_ = response.content['BTC-USD'].filter.low;
-                // let high_ = response.content['BTC-USD'].filter.high;
-                // let update_ = response.last_update;
-                // let Chart_ = high_ % 1000;
-                // let GBDTime_ = update_.slice(update_.indexOf(' '), update_.indexOf('.'));
-                // let PassData = {
-                //     low: low_,
-                //     high: high_,
-                //     stamp: update_,
-                //     chart: Chart_,
-                //     Time: GBDTime_
-                // };
-                // if (Chart_ > 0) {
-                //     dispatch(create(PassData));
-                //     UpdateChart(oldChart => [...oldChart, PassData]);
-                //     DataAmount++;
-                //     UpdateAmount(DataAmount);
-
-                //     // console.log(DataAmount);
-                // }
-                // if (DataAmount > MinAmount) {
-                //     setLoading(false);
-                // }
-
-
-                // //adding restriction : too much data
-                // //makes the web application slow
-                // if (DataAmount > 100) {
-                //     setLoading(true);
-                //     UpdateChart([]);
-                //     DataAmount = 0;
-                // }
+                // TODO
             }
             catch {
                 console.log('still loading data');
