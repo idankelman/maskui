@@ -1,14 +1,20 @@
 export let ws = null
 let messages = []
 let last_token
-// const wb_url = "wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self";
-// const wb_url = "`wss://ws-api.enigma-x.app/?token=${token}`";
-  
+
+
+//Websocket URL : 
+//---------------------------------------------------------------------------------------------------------------
+
 var channelId = "channel_1";
 var clusterId = "demo";
 var apiKey = "oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm";
-const wb_url = `wss://${clusterId}.piesocket.com/v3/${channelId}?api_key=${apiKey}`;
+// const wb_url = "wss://demo.piesocket.com/v3/channel_1?api_key=oCdCMcMPQpbvNjUIzqtvF1d2X2okWpDQj4AwARJuAgtjhzKxVEjQU6IdCjwm&notify_self";
+// const wb_url = "`wss://ws-api.enigma-x.app/?token=${token}`";
+  
 
+//Websocket initialization : 
+//---------------------------------------------------------------------------------------------------------------
 
 
 export const init_ws = ({ token }) => {
@@ -25,6 +31,11 @@ export const init_ws = ({ token }) => {
       })
     }
 
+
+    //Websocket Recive Message : 
+    //---------------------------------------------------------------------------------------------------------------
+
+
     ws.onmessage = (message) => {
       if (message.data.size !== 0) {
         // console.log(JSON.parse(message.data).content['BTC-USD'].filter.high);
@@ -36,6 +47,11 @@ export const init_ws = ({ token }) => {
         
       }
     }
+
+
+    //Websocket close/error :
+    //---------------------------------------------------------------------------------------------------------------
+
     ws.onclose = () => {
       console.log('closing ws connection')
     }
@@ -51,6 +67,13 @@ export const init_ws = ({ token }) => {
   }
 }
 
+
+
+
+//Websocket send_message : 
+//---------------------------------------------------------------------------------------------------------------
+
+
 export const send_message = (data) => {
   try {
     console.log('sending message :\n' + JSON.stringify(data));
@@ -63,6 +86,12 @@ export const send_message = (data) => {
     console.log(error)
   }
 }
+
+
+//Websocket close session : 
+//---------------------------------------------------------------------------------------------------------------
+
+
 
 export const close_ws = () => {
   if (ws?.readyState === 1) {
