@@ -12,6 +12,7 @@ function About() {
                     </div>
                     <div className="description">
                         <h2>
+                            this is the headline
                         </h2>
                         <p>In this project we will implement a mask detection system with a friendly user interface that
 will be able to control parameters and display important statistic such as the percentage of
@@ -30,7 +31,7 @@ then spliced into frames and the segmentation phase begins</p>
                     </div>
                     <div className="description">
                         
-                        {/* <img src = {Collection} alt ="intro"></img> */}
+                        <img src = {Collection} alt ="intro"></img>
                     </div>
                 </div>
             </div>
