@@ -37,7 +37,7 @@ function NewSession() {
             "change_daily": true
         }
     };
-    message = {"name":"__test__"};
+    message = "_____";
 
 
 
@@ -75,7 +75,7 @@ function NewSession() {
 
 
                 let test = JSON.stringify(response);
-                if (test.search("Warnings") != -1) {
+                if (test.search("Warnings") === -1) {
                     UpdateTransLog(test);
                     toast.info(test, {
                         className: "info-toast",
@@ -135,7 +135,7 @@ function NewSession() {
             <div className="Wrapper">
                 <div className="Left">
                     <div className="Start">
-                        <button onClick={()=>send_message(message)}><h2>Start seesion</h2></button>
+                        <button onClick={()=>send_message(message)}><h2>Send Message</h2></button>
                         <button><h2>Choose Threshold</h2></button>
                     </div>
 
