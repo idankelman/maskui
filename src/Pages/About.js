@@ -78,7 +78,8 @@ which are the dimensions of the rectangle around the face
                     <h1>Beta Version</h1>
                 </div>
                 <div className="content">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4qCz4sG7uxo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                {/* <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qDsuSd6kjec" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     {/* <img src = "" alt = "video"></img> */}
                 </div>
             </div>

@@ -1593,8 +1593,21 @@ abbr[title] {
     flex-direction: column;
     align-items: center;
   }
+
+  .About .right{
+    height:700pc;
+  }
+  .About h1{font-size: 40px;}
+
+  .About .Fuller {
+    margin-top: 150px;
+  }
 }
 
+@media only screen and (max-width: 900px) {
+  .About h1{font-size: 30px;}
+
+}
 
 /* =========================================================== */
 /* Modal                                      */
