@@ -6,14 +6,13 @@ function About() {
         <div className="About">
             <Title title="About" />
             <div className="top">
-                <div className="left">
+                <div className="right">
                     <div className="header">
-                        <h1>02 center left head</h1>
+                    <h2>this is the headline</h2>
+                        {/* <h1>02 center left head</h1> */}
                     </div>
                     <div className="description">
-                        <h2>
-                            this is the headline
-                        </h2>
+                        
                         <p>In this project we will implement a mask detection system with a friendly user interface that
 will be able to control parameters and display important statistic such as the percentage of
 people wearing masks properly, and the location of the unmasked people at every frame.
@@ -25,13 +24,17 @@ then spliced into frames and the segmentation phase begins</p>
                     </div>
                 </div>
                 <div className="right">
+                    <p>hello</p>
+                </div>
+
+                <div className="right">
                     <div className="header">
-                        <h1>top right head</h1>
+                        {/* <h1>top right head</h1> */}
 
                     </div>
                     <div className="description">
                         
-                        <img src = {Collection} alt ="intro"></img>
+                        {/* <img src = {Collection} alt ="intro"></img> */}
                     </div>
                 </div>
             </div>
@@ -48,7 +51,7 @@ then spliced into frames and the segmentation phase begins</p>
             <div className="About-content">
                 <div className="left">
                     <div className="header">
-                        <h1>02 center left head</h1>
+                        {/* <h1>02 center left head</h1> */}
 
                     </div>
                     <div className="description">
@@ -64,7 +67,7 @@ which are the dimensions of the rectangle around the face
                 </div>
                 <div className="right">
                     <div className="header">
-                        <h1>center right head</h1>
+                        {/* <h1>center right head</h1> */}
 
                     </div>
                     <div className="description">
