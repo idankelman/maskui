@@ -24,16 +24,15 @@ then spliced into frames and the segmentation phase begins</p>
                     </div>
                 </div>
                 <div className="right">
-                    <p>hello</p>
+                    <h2>hello special introduction</h2>
                 </div>
 
                 <div className="right">
                     <div className="header">
-                        {/* <h1>top right head</h1> */}
-
+                    <h2>this is the headline</h2>
                     </div>
                     <div className="description">
-                        
+                        <p>text</p>
                         {/* <img src = {Collection} alt ="intro"></img> */}
                     </div>
                 </div>
@@ -49,31 +48,38 @@ then spliced into frames and the segmentation phase begins</p>
             </div>
 
             <div className="About-content">
-                <div className="left">
+                <div className="right">
                     <div className="header">
                         {/* <h1>02 center left head</h1> */}
-
+                        <h2>center left cont</h2>
                     </div>
                     <div className="description">
-                        <h2>center left cont</h2>
                         <p>To slice all the faces in the frame, we use CV2 to detect all the faces using facial HaarCodes.
 The face cascade tries to detect faces based on the content of the HaarCodes, the one we are
 currently using is for fronal face. In order to take care of tilting faces, we try to detect in
 different angles. The cascade returns an array with a quadruple of x,y,w,z coordination,
 which are the dimensions of the rectangle around the face
 </p>
-
                     </div>
                 </div>
                 <div className="right">
                     <div className="header">
                         {/* <h1>center right head</h1> */}
-
-                    </div>
-                    <div className="description">
                         <h2>center right cont</h2>
 
                     </div>
+                    <div className="description">
+                        <p>hello</p>
+                    </div>
+                </div>
+            </div>
+            <div className="Fuller">
+                <div className="head">
+                    <h1>Beta Version</h1>
+                </div>
+                <div className="content">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4qCz4sG7uxo" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                    {/* <img src = "" alt = "video"></img> */}
                 </div>
             </div>
         </div>
