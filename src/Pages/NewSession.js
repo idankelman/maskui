@@ -10,6 +10,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 toast.configure()
 
+
+
 function NewSession() {
 
 
@@ -20,10 +22,10 @@ function NewSession() {
 
     const [isLoading, setLoading] = useState(true);
     const [TransLog, UpdateTransLog] = useState("");
+    const [People,UpdatePeople] = useState([]);
     const ToastMessage="Incomming data about the latest transactions will be displayed here";
 
 
-    let People = [1, 2, 3, 4, 5, 6];
     let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYkwrNE5IVDlHdWx2QWU4clhVQmVKNFJaNG02UHd0bmUxRDBQcW9sdXVqa21VOG9vR1lDTkdSalYzUW5kVUxQRVgyVTdLN2dnZGIzVmU4ZlFhclJnT3NYSlQrSUhLL05kUWlUUVRRR0U1WjVCbkVUekU2SFNOa0NFQ3NDVUhoWjE4RE1yQ1hzVTFXK3hjUXI1VzlIM3FkcGxWQWh2TEpTZGlKNGxMZm41NWN3K3g0SkRSbERWRUloTnRYbWdVNGRBYnY4WWJCaW9nazFrTWltU0FHWmluTFF5TXFVRnpHU09zbURXaGgxZEM3ZVQrUVR6UExqYmRaVndUUFE3REpadHN5Y2lzS1ZGRXQveE8wQWk1Vm01Yy9MeGQ1emRFOFYzMzFHb1ZsT0l1YzFsa08yU0JjTTEycGQ1b3NUY0JHVzJNdTF3cmRqalpCMFJXRDl5cmV6Z0ZEUm9FVWw2U3dNL014MmhsT2wyZGlYdWsrZmxUdVNLUE1Xd1ZOa3dNd0pVUVJ5VU1JU0l6bHl4ZERvaXFVa3FBM1habHpBVC9FVC9TMGVydzhySjBsOVErbmFISit6clByb1hzTWRwTHJoanZMcXVuV1NjS2NxYUxyRHNmSEt1SnJmTktWVWluQVVSdGdDYnNOMGNSWkJRcGx1K1dvMWp4VnFEM3Yrb0pNbkova0Q1RDl4eVdjc1RRbDVGSkNpYWNBPT0iLCJpYXQiOjE2NDQxNDk2NDksImV4cCI6MTY0NDIzNjA0OX0.eC8JyBomUeV_PDzBU6WlN5MNBjXEXZjSZ8bkQkewY6M";
     let message = {
         "type": "subscription",
@@ -38,6 +40,25 @@ function NewSession() {
         }
     };
     message = "_____";
+
+    const DUMMY_DATA = {
+        "item": {
+            "name": "blue dress",
+            "details": "graphic print, Logo.",
+            "composition": "Composition: 94% Cotton, 6% Elastam.",
+            "modelDetails": [
+                "Modeal wearing a size M",
+                "Measures: 86 - 60 - 90",
+                "Height: 178cm"
+            ]
+        },
+        "images": [
+            "http://cdn.myoutfits.biz/41/xxxxxxx_001.jpg",
+            "http://cdn.myoutfits.biz/41/xxxxxxx_002.jpg",
+            "http://cdn.myoutfits.biz/41/xxxxxxx_003.jpg",
+            "http://cdn.myoutfits.biz/41/xxxxxxx_004.jpg"
+        ]
+    };
 
 
 
@@ -68,14 +89,27 @@ function NewSession() {
         window.addEventListener("message", function (message) {
             //Analyzing the response , and adding it to the store
             try {
+                
                 const response = message.data;
                 console.log(response);
 
-                //==================================  Toast   ================================
+                if(response === undefined  || JSON.stringify(response).search("Angular") !==-1)
+                    return;
+
 
 
                 let test = JSON.stringify(response);
-                if (test.search("Warnings") === -1) {
+                if (test.search("Warnings") !== -1) {
+                    
+                    //==================================  add to the data   ================================
+                    // TODO
+
+                    let data = DUMMY_DATA;
+                    setPeople(data);
+                 
+
+                    //==================================  Toast   ================================
+
                     UpdateTransLog(test);
                     toast.info(test, {
                         className: "info-toast",
@@ -83,17 +117,35 @@ function NewSession() {
                         closeButton: false,
                         autoClose: 4000
                     });
+
+
                     return;
                 }
 
-                //==================================  add to the data   ================================
-                // TODO
             }
             catch {
                 console.log('still loading data');
             }
         });
     }, []);
+
+
+    function setPeople(data){
+        UpdatePeople([]);
+        let temp = [];
+        for(let i = 0;i<data.images.length;i++)
+        {
+            let person = {
+                id: i,
+                name: "blue dress",
+                label: "MASK",
+                images: data.images[i]
+            };
+            temp.push(person);
+        }
+        UpdatePeople(temp);
+        console.log(People)
+    }
 
 
     return (
@@ -103,7 +155,7 @@ function NewSession() {
                 <div className="Left">
                     <div className="Start">
                         <button onClick={()=>send_message(message)}><h2>Send Message</h2></button>
-                        <button><h2>Choose Threshold</h2></button>
+                        <button onClick={()=>setPeople(DUMMY_DATA)}><h2>Choose Threshold</h2></button>
                     </div>
 
                     <div className="Anlyze">
@@ -130,7 +182,7 @@ function NewSession() {
 
             </div>
             <div className="Bottom">
-                {People.map(person => (<Person key={person} />))}
+                {People.map(person => (<Person key={person.id} />))}
             </div>
         </div>
 
