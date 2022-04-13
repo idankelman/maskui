@@ -53,8 +53,8 @@ function NewSession() {
             ]
         },
         "images": [
-            "http://cdn.myoutfits.biz/41/xxxxxxx_001.jpg",
-            "http://cdn.myoutfits.biz/41/xxxxxxx_002.jpg",
+            "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
+            "https://cdn.vox-cdn.com/thumbor/v7HjYONlHfdaUJRW4bZOxNvYm1A=/0x231:2456x2073/1400x788/filters:focal(0x231:2456x2073):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/44255874/458999260.0.jpg",
             "http://cdn.myoutfits.biz/41/xxxxxxx_003.jpg",
             "http://cdn.myoutfits.biz/41/xxxxxxx_004.jpg"
         ]
@@ -139,7 +139,7 @@ function NewSession() {
                 id: i,
                 name: "blue dress",
                 label: "MASK",
-                images: data.images[i]
+                image: data.images[i]
             };
             temp.push(person);
         }
@@ -182,7 +182,7 @@ function NewSession() {
 
             </div>
             <div className="Bottom">
-                {People.map(person => (<Person key={person.id} />))}
+                {People.map(person => (<Person key={person.id} img ={person.image} label = {person.label}/>))}
             </div>
         </div>
 
