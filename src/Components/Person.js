@@ -32,7 +32,7 @@ function getPallet(){
     return (
         <div className ="Person" style={{backgroundColor:getPallet()}}>
             <button onClick={()=>console.log(params)}>
-                <img src ={params.img? params.img:logo} alt = "logo" ></img>
+                <img src ={params.img? params.img:logo} style = {!params.img? {width : "20px"}:{}}alt = "logo" ></img>
             </button>
         </div>
     );
