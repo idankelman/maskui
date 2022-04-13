@@ -52,11 +52,19 @@ function NewSession() {
                 "Height: 178cm"
             ]
         },
-        "images": [
-            "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
-            "https://cdn.vox-cdn.com/thumbor/v7HjYONlHfdaUJRW4bZOxNvYm1A=/0x231:2456x2073/1400x788/filters:focal(0x231:2456x2073):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/44255874/458999260.0.jpg",
-            "http://cdn.myoutfits.biz/41/xxxxxxx_003.jpg",
-            "http://cdn.myoutfits.biz/41/xxxxxxx_004.jpg"
+        "persons": [
+            {
+                img: "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
+                label: "MASK"},
+            {
+                img:"https://cdn.vox-cdn.com/thumbor/v7HjYONlHfdaUJRW4bZOxNvYm1A=/0x231:2456x2073/1400x788/filters:focal(0x231:2456x2073):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/44255874/458999260.0.jpg",
+                label: "NO_MASK"},
+            {
+                img:"https://cdn.vox-cdn.com/thumbor/v7HjYONlHfdaUJRW4bZOxNvYm1A=/0x231:2456x2073/1400x788/filters:focal(0x231:2456x2073):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/44255874/458999260.0.jpg",
+                label: "NOSE"},
+            {
+                img:"https://cdn.vox-cdn.com/thumbor/v7HjYONlHfdaUJRW4bZOxNvYm1A=/0x231:2456x2073/1400x788/filters:focal(0x231:2456x2073):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/44255874/458999260.0.jpg",
+                label: "ASDD"}
         ]
     };
 
@@ -133,13 +141,13 @@ function NewSession() {
     function setPeople(data){
         UpdatePeople([]);
         let temp = [];
-        for(let i = 0;i<data.images.length;i++)
+        for(let i = 0;i<data.persons.length;i++)
         {
             let person = {
                 id: i,
                 name: "blue dress",
-                label: "MASK",
-                image: data.images[i]
+                label: data.persons[i].label,
+                image: data.persons[i].img
             };
             temp.push(person);
         }
