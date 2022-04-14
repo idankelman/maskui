@@ -29,10 +29,16 @@ function getPallet(){
     return founder?founder.color:Pallets[3].color;
 }
 
+function getIconStyle (){
+    return !params.img? {width : "20px"}:{};
+}
+
+
     return (
         <div className ="Person" style={{backgroundColor:getPallet()}}>
             <button onClick={()=>console.log(params)}>
-                <img src ={params.img? params.img:logo} style = {!params.img? {width : "20px"}:{}}alt = "logo" ></img>
+                <img src ={params.img? params.img:logo} style = {getIconStyle()} alt = "logo" ></img>
+                <div className="Cover" style = {{borderColor : getPallet() , border : "40px" }}>{params.label}</div>
             </button>
         </div>
     );
