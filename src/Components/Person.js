@@ -39,6 +39,7 @@ function getIconStyle (){
             <button onClick={()=>console.log(params)}>
                 <img src ={params.img? params.img:logo} style = {getIconStyle()} alt = "logo" ></img>
                 <div className="Cover" style = {{borderColor : getPallet() , border : "40px" }}>{params.label}</div>
+                <div className="Lable" style = {{backgroundColor : getPallet()}}>{params.label}</div>
             </button>
         </div>
     );

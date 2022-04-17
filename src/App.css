@@ -1047,6 +1047,7 @@
   /* width:0px; */
 }
 
+
 .Person button .Cover{
   display: flex;
   position: absolute;
@@ -1066,12 +1067,41 @@
   opacity: 0;
 }
 
+
+.Person button .Lable{
+
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f488e;
+  height: 20px;
+  width: 140px;
+  margin-top: 120px;
+  /* border-radius: 8px; */
+  font-family: monospace;
+  font-size: 18px;
+  color:white;
+  z-index: 4;
+  opacity: 0;
+  transition-delay: 1.4s;
+
+}
+
+
 .Person button .Cover:hover{
   cursor: pointer;
   color: white;
   transition: all ease 0.35s;
   opacity: 1;
+
 }
+
+.Person button .Cover:hover ~.Lable{
+  transition: all ease 0.4s;
+  opacity: 1;
+}
+
+
 
 
 /* =========================================================== */
