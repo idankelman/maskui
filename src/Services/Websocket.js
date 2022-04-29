@@ -21,7 +21,9 @@ export const init_ws = ({ token }) => {
   try {
     if ((ws === null || ws.readyState === 3) && token) {
       last_token = token
-      ws = new WebSocket(`wss://${clusterId}.piesocket.com/v3/${channelId}?api_key=${apiKey}`)
+      //ws = new WebSocket(`wss://${clusterId}.piesocket.com/v3/${channelId}?api_key=${apiKey}`)
+      ws = new WebSocket(`ws://localhost:5000`)
+      //ws://localhost:5000
     }
 
     ws.onopen = () => {

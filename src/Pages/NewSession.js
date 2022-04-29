@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Person from "../Components/Person";
 import Title from "../Components/Title";
+
 import { init_ws, send_message,close_ws } from '../Services/Websocket'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -17,7 +18,7 @@ function NewSession() {
     //==========================================================================
     //                          Defninng Reference Variables
     //==========================================================================
-
+    const prefix  ='data:image/png;base64,';
     const [isLoading, setLoading] = useState(true);
     const [capture, setCap] = useState('https://static.videezy.com/system/resources/previews/000/014/051/original/pixel_loading_bar.mp4');
     const [TransLog, UpdateTransLog] = useState('');
@@ -29,16 +30,8 @@ function NewSession() {
     let message = "_____";
 
     const DUMMY_DATA = {
-        "item": {
-            "capture": 'http://marina.art-net.co.il:120/mjpg/video.mjpg',
-            "name": "blue dress",
-            "details": "graphic print, Logo.",
-            "modelDetails": [
-                "Modeal wearing a size M",
-                "Measures: 86 - 60 - 90",
-                "Height: 178cm"
-            ]
-        },
+        "scene_img": 'http://marina.art-net.co.il:120/mjpg/video.mjpg',
+        
         "persons": [
             {
                 img: "https://imageio.forbes.com/specials-images/imageserve/5f64397931669e167fc57eaf/960x0.jpg?fit=bounds&format=jpg&width=960",
@@ -85,32 +78,32 @@ function NewSession() {
             try {
                 
                 const response = message.data;
-                console.log(response);
 
-                if(response === undefined  || JSON.stringify(response).search("Angular") !==-1)
-                    return;
+                // if(response === undefined  || JSON.stringify(response).search("Angular") !==-1)
+                //     return;
 
 
 
                 let test = JSON.stringify(response);
-                if (test.search("Warnings") !== -1) {
+                // if (test.search("Warnings") !== -1)
+                if (true) {
                     
                     //==================================  add to the data   ================================
                     // TODO
 
-                    let data = DUMMY_DATA;
+                    let data = response;
                     setPeople(data);
-                    setCap(data.item.capture);
+                    setCap(prefix+data.scene_img);
 
                     //==================================  Toast   ================================
 
-                    UpdateTransLog(test);
-                    toast.info(test, {
-                        className: "info-toast",
-                        position: toast.POSITION.TOP_CENTER,
-                        closeButton: false,
-                        autoClose: 4000
-                    });
+                    //UpdateTransLog(test);
+                    // toast.info(test, {
+                    //     className: "info-toast",
+                    //     position: toast.POSITION.TOP_CENTER,
+                    //     closeButton: false,
+                    //     autoClose: 4000
+                    // });
 
 
                     return;
@@ -133,12 +126,13 @@ function NewSession() {
                 id: i,
                 name: "blue dress",
                 label: data.persons[i].label,
-                image: data.persons[i].img
+                image: prefix+data.persons[i].img
             };
+            //console.log(person)
             temp.push(person);
         }
         UpdatePeople(temp);
-        console.log(People)
+        // console.log(People)
     }
 
 
