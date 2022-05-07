@@ -27,13 +27,14 @@ function NewSession() {
     const [capture, setCap] = useState('https://static.videezy.com/system/resources/previews/000/014/051/original/pixel_loading_bar.mp4');
     const [TransLog, UpdateTransLog] = useState('');
     const [People, UpdatePeople] = useState([]);
+    const [Room, updateRoom] = useState([[]]);
     const ToastMessage = "Incomming data about the latest transactions will be displayed here";
 
 
     let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiYkwrNE5IVDlHdWx2QWU4clhVQmVKNFJaNG02UHd0bmUxRDBQcW9sdXVqa21VOG9vR1lDTkdSalYzUW5kVUxQRVgyVTdLN2dnZGIzVmU4ZlFhclJnT3NYSlQrSUhLL05kUWlUUVRRR0U1WjVCbkVUekU2SFNOa0NFQ3NDVUhoWjE4RE1yQ1hzVTFXK3hjUXI1VzlIM3FkcGxWQWh2TEpTZGlKNGxMZm41NWN3K3g0SkRSbERWRUloTnRYbWdVNGRBYnY4WWJCaW9nazFrTWltU0FHWmluTFF5TXFVRnpHU09zbURXaGgxZEM3ZVQrUVR6UExqYmRaVndUUFE3REpadHN5Y2lzS1ZGRXQveE8wQWk1Vm01Yy9MeGQ1emRFOFYzMzFHb1ZsT0l1YzFsa08yU0JjTTEycGQ1b3NUY0JHVzJNdTF3cmRqalpCMFJXRDl5cmV6Z0ZEUm9FVWw2U3dNL014MmhsT2wyZGlYdWsrZmxUdVNLUE1Xd1ZOa3dNd0pVUVJ5VU1JU0l6bHl4ZERvaXFVa3FBM1habHpBVC9FVC9TMGVydzhySjBsOVErbmFISit6clByb1hzTWRwTHJoanZMcXVuV1NjS2NxYUxyRHNmSEt1SnJmTktWVWluQVVSdGdDYnNOMGNSWkJRcGx1K1dvMWp4VnFEM3Yrb0pNbkova0Q1RDl4eVdjc1RRbDVGSkNpYWNBPT0iLCJpYXQiOjE2NDQxNDk2NDksImV4cCI6MTY0NDIzNjA0OX0.eC8JyBomUeV_PDzBU6WlN5MNBjXEXZjSZ8bkQkewY6M";
     let message = "_____";
 
-    let DUMMY_DATA = {
+    const DUMMY_DATA = {
         "scene_img": 'http://marina.art-net.co.il:120/mjpg/video.mjpg',
 
         "persons": [
@@ -54,6 +55,8 @@ function NewSession() {
             }
         ]
     };
+
+
 
     const JSONFILE = {
         "row1": {
@@ -293,8 +296,29 @@ function NewSession() {
         // console.log(People)
     }
 
+    function setRoom(data, web = false) {
+        updateRoom([[]]);
+        let temp = [];
+        for (let i = 0; i < data.persons.length; i++) {
+            let tempRow = [];
+            let row = data.persons[i].row;
+            for (let j = 0; j < row.length; j++) {
+                let person = {
+                    id: j,
+                    name: "blue dress",
+                    label: "",
+                    image: "",
+                };
+                //console.log(person)
+                tempRow.push(person);
+            }
+            temp.push(tempRow)
+        }
+        updateRoom(temp);
+    }
 
-    
+
+
 
 
     async function analyzeRoomConf() {
@@ -310,19 +334,22 @@ function NewSession() {
 
     function testRoomConf(resposne) {
 
-        DUMMY_DATA = {'persons':[]};
+        let roomData  = { 'persons': [] };
         let rows = Object.keys(resposne)
         for (let row of rows) {
             let chairs = Object.keys(resposne[row])
+            let chairs_data = [];
             for (let chair of chairs) {
-                DUMMY_DATA['persons'].push({
-                    id: DUMMY_DATA.length,
+                chairs_data.push({
+                    id: chairs_data.length,
                     name: "blue dress",
                     label: chair.x0,
                 });
             }
+            roomData['persons'].push({ 'row': chairs_data });
         }
-        console.log(DUMMY_DATA)
+        console.log(roomData)
+        setRoom(roomData);
     }
 
 
@@ -363,15 +390,21 @@ function NewSession() {
                 </div>
 
             </div>
+
+
+            {/* -------------------- Testing the room config functionality----------------------------  */}
+
+            {Room.map(row => (<div className="Bottom" >
+                {row.map(person => (<Person key={person.id} img={person.image} label={person.label} />))}
+            </div>))}
+
+
+
+            {/* -------------------- Testing the people funcitonality --------------------------------  */}
             <div className="Bottom">
                 {People.map(person => (<Person key={person.id} img={person.image} label={person.label} />))}
             </div>
-            <div className="Bottom">
-                {People.map(person => (<Person key={person.id} img={person.image} label={person.label} />))}
-            </div>
-            <div className="Bottom">
-                {People.map(person => (<Person key={person.id} img={person.image} label={person.label} />))}
-            </div>
+
         </div>
 
     );
